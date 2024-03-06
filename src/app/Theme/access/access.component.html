@@ -1,0 +1,287 @@
+<section id="access" class="py-5">
+  <div class="container-fluid py-5">
+    <div class="container col-xl-4 col-md-6 col-sm-10">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title fw-bold text-center mt-4">
+            <svg
+              id="logo-86"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="ccustom"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M25.5557 11.6853C23.9112 10.5865 21.9778 10 20 10V0C23.9556 0 27.8224 1.17298 31.1114 3.37061C34.4004 5.56823 36.9638 8.69181 38.4776 12.3463C39.9913 16.0008 40.3874 20.0222 39.6157 23.9018C38.844 27.7814 36.9392 31.3451 34.1421 34.1421C31.3451 36.9392 27.7814 38.844 23.9018 39.6157C20.0222 40.3874 16.0008 39.9913 12.3463 38.4776C8.69181 36.9638 5.56823 34.4004 3.37061 31.1114C1.17298 27.8224 0 23.9556 0 20H10C10 21.9778 10.5865 23.9112 11.6853 25.5557C12.7841 27.2002 14.3459 28.4819 16.1732 29.2388C18.0004 29.9957 20.0111 30.1937 21.9509 29.8078C23.8907 29.422 25.6725 28.4696 27.0711 27.0711C28.4696 25.6725 29.422 23.8907 29.8078 21.9509C30.1937 20.0111 29.9957 18.0004 29.2388 16.1732C28.4819 14.3459 27.2002 12.7841 25.5557 11.6853Z"
+                fill="#007DFC"
+              ></path>
+              <path
+                class="ccustom"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10 5.16562e-07C10 1.31322 9.74135 2.61358 9.2388 3.82683C8.73625 5.04009 7.99966 6.14248 7.07107 7.07107C6.14249 7.99966 5.0401 8.73625 3.82684 9.2388C2.61358 9.74134 1.31322 10 5.4439e-06 10L5.00679e-06 20C2.62644 20 5.22716 19.4827 7.65368 18.4776C10.0802 17.4725 12.285 15.9993 14.1421 14.1421C15.9993 12.285 17.4725 10.0802 18.4776 7.65367C19.4827 5.22715 20 2.62643 20 -3.81469e-06L10 5.16562e-07Z"
+                fill="#007DFC"
+              ></path>
+            </svg>
+            Logoipsum
+          </h1>
+          <div
+            class="nav nav-underline justify-content-around"
+            id="nav-tab"
+            role="tablist"
+          >
+            <button
+              class="nav-link fw-semibold active"
+              id="nav-login-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-login"
+              type="button"
+              role="tab"
+              aria-controls="nav-login"
+              aria-selected="true"
+            >
+              login
+            </button>
+            <button
+              class="nav-link fw-semibold"
+              id="nav-register-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-register"
+              type="button"
+              role="tab"
+              aria-controls="nav-register"
+              aria-selected="false"
+            >
+              Register
+            </button>
+          </div>
+
+          <div class="tab-content" id="nav-tabContent">
+            <div
+              class="tab-pane fade show active p-sm-4"
+              id="nav-login"
+              role="tabpanel"
+              aria-labelledby="nav-home-tab"
+              tabindex="0"
+            >
+              <form method="post" action="">
+                <div class="mb-3">
+                  <label for="loginEmail" class="fw-bold form-label"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    id="loginEmail"
+                    placeholder="example@gmail.com"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="loginPassword" class="fw-bold form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    name="password"
+                    class="form-control"
+                    id="loginPassword"
+                    placeholder="***********************"
+                  />
+                </div>
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >stay signed in</label
+                  >
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary col-12 mb-3">
+                    Submit
+                  </button>
+                  <a href="#" class="btn">Forgot Password?</a>
+                </div>
+              </form>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="nav-register"
+              role="tabpanel"
+              aria-labelledby="nav-register-tab"
+              tabindex="0"
+            >
+              <form method="post" action="" enctype="multipart/form-data">
+                <div class="mb-3">
+                  <label for="registerName" class="form-label fw-bold"
+                    >Full-Name</label
+                  >
+                  <input
+                    type="text"
+                    name="fullName"
+                    class="form-control"
+                    id="registerName"
+                    placeholder="Zeyad Abdelazim Ali"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="registerEmail" class="form-label fw-bold"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="registerEmail"
+                    name="email"
+                    placeholder="example@gmail.com"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="registerPassword" class="form-label fw-bold"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="registerPassword"
+                    name="password"
+                    placeholder="****************"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="registerConfPassword" class="form-label fw-bold"
+                    >Confirmation password
+                  </label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="registerConfPassword"
+                    name="confirmation_password"
+                    placeholder="****************"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="registerPhone" class="form-label fw-bold"
+                    >Phone</label
+                  >
+                  <input
+                    type="text"
+                    name="phone"
+                    class="form-control"
+                    id="registerPhone"
+                    placeholder="+201090000000"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="registerCity" class="form-label fw-bold"
+                    >City</label
+                  >
+                  <input
+                    type="text"
+                    name="city"
+                    class="form-control"
+                    id="registerCity"
+                    placeholder="Giza"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="registerCity" class="form-label fw-bold"
+                    >Area</label
+                  >
+                  <input
+                    type="text"
+                    name="city"
+                    class="form-control"
+                    id="registerCity"
+                    placeholder="Haram"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="registerCity" class="form-label fw-bold"
+                    >Birth Date</label
+                  >
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-lg-4 mb-lg-0 mb-3 pe-lg-1 px-0">
+                        <select name="birthYear" id="year" class="form-select">
+                          <option value="1990">1990</option>
+                          <option value="1991">1991</option>
+                          <option value="1992">1992</option>
+                          <option value="1993">1993</option>
+                          <option value="1994">1994</option>
+                          <option value="1995">1995</option>
+                          <option value="1996">1996</option>
+                          <option value="1997">1997</option>
+                          <option value="1998">1998</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-4 mb-lg-0 mb-3 px-lg-1 px-0">
+                        <select
+                          name="birthMonth"
+                          id="month"
+                          class="form-select"
+                        >
+                          <option value="jan">january</option>
+                          <option value="feb">february</option>
+                          <option value="march">March</option>
+                          <option value="april">April</option>
+                          <option value="may">may</option>
+                          <option value="june">June</option>
+                          <option value="july">July</option>
+                          <option value="august">August</option>
+                          <option value="september">September</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-4 ps-lg-1 px-0">
+                        <select name="birthDay" id="day" class="form-select">
+                          <option value="01">01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <option value="04">04</option>
+                          <option value="05">05</option>
+                          <option value="06">06</option>
+                          <option value="07">07</option>
+                          <option value="08">08</option>
+                          <option value="09">09</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="registerGender" class="form-label fw-bold"
+                    >Gender</label
+                  >
+                  <select name="gender" id="registerGender" class="form-select">
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                  </select>
+                </div>
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="registerCheck"
+                  />
+                  <label class="form-check-label" for="registerCheck"
+                    >I agree to the terms and conditions of the website.</label
+                  >
+                </div>
+                <button type="submit" class="btn btn-primary col-12">
+                  Register
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

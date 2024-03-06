@@ -1,0 +1,200 @@
+<section id="jobDetails" class="py-5">
+  <div class="container py-5">
+    <h2 class="fw-semibold"><span>UI UX Designer</span></h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur. Nulla felis consectetur aliquet
+      neque condimentum non. Sed sagittis libero condimentum bibendum venenatis.
+      Nulla feugiat ut proin facilisis in at et sit. In est semper aliquet porta
+      ultricies. Elementum blandit sed risus amet non.
+    </p>
+    <div class="row mb-3">
+      <div class="col-xxl-1 col-lg-2 col-md-3 fw-medium mb-lg-0 mb-3">
+        <i class="fa-solid fa-bag-shopping"></i> <span>Junior</span>
+      </div>
+      <div class="col-xxl-1 col-lg-2 px-lg-0 col-md-9 fw-medium mb-lg-0 mb-3">
+        <i class="fa-regular fa-clock"></i> <span>Full-time</span>
+      </div>
+      <div class="col-xxl-1 col-lg-2 col-md-3 pe-lg-0 fw-medium mb-lg-0 mb-3">
+        <i class="fa-regular fa-building"></i> <span>On Site</span>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-9 fw-medium mb-lg-0 mb-3">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Computer Science</span>
+      </div>
+    </div>
+    <h3 class="fw-semibold">
+      <span>Salary range: E£ 20000-150000</span>
+    </h3>
+  </div>
+</section>
+<section id="jobReq" class="py-5">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-4 mb-lg-0 mb-3">
+        <h2 class="fw-semibold mb-3"><span>Skills</span></h2>
+        <ul>
+          <li>Communication skills (verbal and written)</li>
+          <li>Team collaboration</li>
+          <li>Problem-solving and critical thinking</li>
+          <li>Emotional intelligence</li>
+          <li>Conflict resolution</li>
+        </ul>
+      </div>
+      <div class="col-lg-5 mb-lg-0 mb-3">
+        <h2 class="fw-semibold mb-3"><span>Requirements</span></h2>
+        <p>
+          Proven experience as a Senior UI/UX Designer or similar role.
+          Proficiency in Figma and other relevant design tools. Strong portfolio
+          showcasing a range of design projects.
+        </p>
+      </div>
+      <div class="col-lg-3 align-self-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <button (click)="showApply()" class="btn apply col-lg-11 py-3 mb-3">
+              Apply
+            </button>
+            <a href="#" class="btn col-lg-11 py-3">Share</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ====================================== -->
+<div id="apply" *ngIf="apply">
+  <div class="layout py-5">
+    <form class="container col-lg-6 col-md-8 pb-4 px-0">
+      <h2 class="fw-bold mb-3 rounded-3 py-3 fw-normal mb-0 ps-md-5 ps-3">
+        <button
+          id="exit"
+          (click)="close()"
+          class="btn me-2 exit float-end fw-semibold py-2 px-5"
+        >
+          Exit</button
+        ><span>Apply Now</span>
+      </h2>
+      <div class="form-info px-md-4 px-2">
+        <div class="form-container py-3 px-md-5 px-2 rounded-3 mb-5">
+          <div class="form-group mb-3">
+            <label for="exp" class="form-label">
+              <span class="fw-bold">Years of experience</span>
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              id="exp"
+              placeholder="0"
+              name="experience"
+              [(ngModel)]="experience"
+            />
+            <span *ngIf="invalide" class="text-danger"
+              >*this field is required</span
+            >
+          </div>
+          <iframe
+            width="100%"
+            height="600"
+            src="https://pdfobject.com/pdf/sample.pdf"
+            class="rounded-3 mb-3"
+            frameborder="0"
+          ></iframe>
+          <div class="form-group mb-3 text-center">
+            <label for="cv" class="text-center d-block p-2 rounded-3">
+              <span class="fs-4"
+                ><i class="fa-solid fa-gear"></i> Resume options</span
+              >
+            </label>
+            <input
+              type="file"
+              hidden
+              class="form-control"
+              name="cv"
+              [(ngModel)]="cv"
+              id="cv"
+            />
+          </div>
+        </div>
+        <div class="form-group text-center">
+          <button (click)="next()" class="btn py-2 col-12">
+            Next <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div id="summary" *ngIf="summary">
+  <div class="layout py-5">
+    <div class="user-summary container col-lg-6 col-md-8 col-11 px-0 rounded-3">
+      <h2 class="text-center mb-0 rounded-3 py-2 fw-bold">
+        <button (click)="prev()" class="btn float-start ms-2 fw-semibold py-2">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button
+          id="exit"
+          (click)="close()"
+          class="btn me-2 exit float-end fw-semibold py-2 px-5"
+        >
+          Exit
+        </button>
+      </h2>
+
+      <div class="contact-info py-3 px-md-5 px-4">
+        <h2 class="fw-bold"><span>Preview</span></h2>
+        <h5 class="fw-bold mb-3">Contact Information</h5>
+        <div class="row form-group">
+          <div class="col-md-6 mb-3">
+            <label>Full Name</label>
+            <span class="d-block form-control px-0 fw-bold"
+              >Zeyad.abdelazim</span
+            >
+          </div>
+          <div class="col-md-6 mb-3">
+            <label>Email</label>
+            <span class="d-block form-control px-0 fw-bold"
+              >Zeyad98@gmail.com</span
+            >
+          </div>
+          <div class="col-md-6 mb-3">
+            <label>Phone Number</label>
+            <span class="d-block form-control px-0 fw-bold">011387339292</span>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label>Gender</label>
+            <span class="d-block form-control px-0 fw-bold">Male</span>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label>City</label>
+            <span class="d-block form-control px-0 fw-bold">Giza</span>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label>Area</label>
+            <span class="d-block form-control px-0 fw-bold">Haram</span>
+          </div>
+        </div>
+        <h5 class="fw-bold mb-3">Application Details</h5>
+        <div class="row form-group">
+          <div class="col-12 mb-3">
+            <label>Cv</label>
+            <span class="d-block form-control px-0 fw-bold"
+              >Zeyad abdelazim CV.pdf</span
+            >
+          </div>
+        </div>
+        <h5 class="fw-bold mb-3">Question answer</h5>
+        <div class="row form-group">
+          <div class="col-12 mb-3">
+            <label>what is your years of experience?</label>
+            <span class="d-block form-control px-0 fw-bold">{{
+              experience
+            }}</span>
+          </div>
+        </div>
+        <button (click)="submit()" class="btn submit col-12 fw-semibold py-2">
+          <i class="fa-regular fa-circle-check"></i> Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

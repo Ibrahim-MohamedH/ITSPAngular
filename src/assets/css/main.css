@@ -1,0 +1,1093 @@
+:root {
+  --main: #2a286b;
+  --font-main: #ffffff;
+  --main-paragraph: #4f5a68;
+  --linear: linear-gradient(to right, #2a286b, #0861b3);
+  --linear-dark: linear-gradient(to right, #222222, #4e4e4e);
+  --dm-body: #222222;
+  --dm-body2: #333333;
+  --dm-body3: #444444;
+  --lm-body: #efefef;
+  --font-dark: #f4f4f4;
+  --second-dark-color: #4e4e4e;
+  --font-family: "Encode Sans Semi Expanded", sans-serif;
+  --placeholder: #80848a;
+  --btn-back: 8px 16px;
+}
+* {
+  font-family: var(--font-family);
+  transition: all 0.3s;
+}
+*::first-letter {
+  text-transform: capitalize;
+}
+html {
+  background: var(--linear);
+}
+/*--------------------------------------------------------------
+# navbar
+--------------------------------------------------------------*/
+nav {
+  background-image: var(--linear);
+}
+nav a.navbar-brand,
+nav a.navbar-brand:hover {
+  color: var(--font-main);
+}
+nav .navbar-brand svg path {
+  fill: var(--font-main);
+}
+nav .navbar-nav .nav-link,
+nav .navbar-nav .nav-link.show {
+  color: var(--font-main);
+  box-shadow: none;
+}
+nav .navbar-nav .nav-item .dropdown-menu.show {
+  background-image: var(--linear);
+}
+nav .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  color: var(--font-main);
+}
+nav .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.281);
+}
+nav .nav-item button.btn {
+  background-color: var(--font-main);
+}
+nav .nav-item a.access span {
+  background: var(--linear);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+#hero a {
+  background: var(--linear);
+  background-repeat: no-repeat;
+  color: var(--font-main);
+}
+#hero swiper {
+  padding: 40px 0px;
+}
+#hero .swiper-slide img {
+  border-radius: 20px;
+}
+#hero .swiper-slide {
+  filter: blur(2px);
+  opacity: 1;
+}
+#hero .swiper-slide {
+  z-index: -2;
+  transform: scale(0.7);
+}
+
+#hero .swiper-wrapper {
+  align-items: center;
+}
+#hero .swiper-slide-active {
+  filter: blur(0px);
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1.2);
+}
+.swiper-slide-prev,
+.swiper-slide-next {
+  z-index: -1;
+}
+
+.swiper-slide:hover {
+  cursor: grab;
+}
+.swiper-slide:active {
+  cursor: grabbing;
+}
+/*--------------------------------------------------------------
+# AboutUs page
+--------------------------------------------------------------*/
+#AboutUs-hero {
+  background-image: url(../images/AboutUs.png);
+  color: var(--font-main);
+}
+
+#aboutCard-2 {
+  background: var(--linear);
+  color: var(--font-main);
+}
+#aboutCard-2 ul {
+  list-style-type: square;
+}
+
+#aboutCard-3 #navbar-about-us a.active {
+  text-decoration: underline;
+  background-color: transparent;
+}
+#aboutCard-3 .scrollspy-about-us {
+  max-height: 250px;
+}
+/* ===== ScrollBar Edit ===== */
+#aboutCard-3 .scrollspy-about-us::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* ===== End ScrollBar Edit ===== */
+
+#aboutCard-4,
+#aboutCard-5,
+#aboutCard-6 {
+  background: var(--linear);
+  color: var(--font-main);
+}
+#aboutCard-4 .position-relative img {
+  width: 100%;
+}
+#aboutCard-5 ul {
+  list-style-type: square;
+}
+#aboutCard-7 > .container .col-12 .row {
+  min-height: 88px;
+}
+/*--------------------------------------------------------------
+# solutions
+--------------------------------------------------------------*/
+#solutions {
+  background: var(--linear);
+  background-repeat: no-repeat;
+}
+#solutions h3 {
+  font-size: 48px;
+}
+#solutions .allsolutions div a {
+  text-decoration: none;
+}
+#solutions .allsolutions div a .container {
+  border-radius: 20px;
+}
+#solutions .allsolutions .row i {
+  font-size: 50px;
+}
+#solutions .allsolutions .container p {
+  font-size: 16px;
+}
+
+#solutions #software,
+#solutions #marketing,
+#solutions #business {
+  transition: all 0.5s;
+}
+#solutions #software p {
+  font-size: 14px;
+}
+/*--------------------------------------------------------------
+# Reels
+--------------------------------------------------------------*/
+#reels {
+  background: var(--linear);
+  background-repeat: no-repeat;
+}
+#reels iframe {
+  height: 475px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+#reels h3 {
+  font-size: 48px;
+  color: var(--font-main);
+}
+#reels .card .card-title a {
+  background: var(--linear);
+  background-repeat: no-repeat;
+  color: var(--font-main);
+}
+
+#reels .card-body p {
+  font-size: 20px;
+}
+#reels .mini-cards .card {
+  transition: transform 0.4s;
+}
+#reels .mini-cards .card:hover {
+  transform: scale(1.05);
+}
+
+#reels .mini-cards img {
+  height: 170px;
+}
+#reels .mini-cards .card-body h5 {
+  font-size: 14px;
+}
+#reels .mini-cards .card-body p {
+  font-size: 10px;
+}
+#reels .mini-cards .card-body a {
+  font-size: 10px;
+}
+#reels .card .reelCover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#reels .card .reelCover:hover {
+  cursor: pointer;
+}
+#reels .card .reelCover i {
+  font-size: 30px;
+}
+
+/*--------------------------------------------------------------
+# portfolio
+--------------------------------------------------------------*/
+#portfolio h3 {
+  font-size: 48px;
+}
+#portfolio .container > p {
+  font-size: 20px;
+}
+
+#portfolio h5 {
+  font-size: 20px;
+}
+#portfolio .swiper-slide p {
+  font-size: 14px;
+}
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+#team h3 {
+  font-size: 48px;
+}
+#team .container > p {
+  font-size: 20px;
+}
+#team .swiper-slide > div {
+  position: relative;
+  overflow: hidden;
+}
+#team .swiper-slide .layout-1,
+#team .swiper-slide .layout-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+#team .swiper-slide .layout-1 {
+  background: linear-gradient(transparent, var(--main));
+  color: var(--font-dark);
+}
+#team .swiper-slide .layout-1 h5 {
+  font-size: 20px;
+}
+#team .swiper-slide .layout-1 p {
+  font-size: 16px;
+}
+#team .swiper-slide .layout-2 {
+  transition: all 0.4s;
+  opacity: 0;
+}
+#team .swiper-slide:hover .layout-2 {
+  background: linear-gradient(0deg, transparent, #2a286b70);
+  opacity: 1;
+}
+#team .swiper-slide .layout-2 a {
+  color: var(--font-main);
+  font-size: 30px;
+  transition: color 0.3s;
+}
+#team .swiper-slide .layout-2 a:hover {
+  cursor: pointer;
+  color: var(--main);
+}
+/*--------------------------------------------------------------
+# world
+--------------------------------------------------------------*/
+#world {
+  background: var(--linear);
+  color: var(--font-main);
+}
+
+#world p {
+  font-size: 20px;
+}
+/*--------------------------------------------------------------
+# ready
+--------------------------------------------------------------*/
+
+#ready a.btn {
+  background: var(--linear);
+  color: white;
+  background-repeat: no-repeat;
+}
+
+/*--------------------------------------------------------------
+# footer
+--------------------------------------------------------------*/
+footer {
+  background-image: var(--linear);
+}
+footer a.navbar-brand {
+  color: var(--font-main);
+}
+footer .navbar-brand svg path {
+  fill: var(--font-main);
+}
+footer .navbar-nav .nav-link,
+footer .navbar-nav .nav-link.show {
+  color: var(--font-main);
+  box-shadow: none;
+}
+footer .navbar-nav .nav-item .dropdown-menu.show {
+  background-image: var(--linear);
+}
+footer .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  color: var(--font-main);
+}
+footer .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.281);
+}
+footer .nav-item a.scroll-top {
+  background-color: var(--font-main);
+  color: var(--main);
+  border-radius: 50%;
+  width: 30px !important;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+footer .nav-item a.scroll-top:hover {
+  cursor: pointer;
+}
+footer .nav-item a.scroll-top {
+  color: var(--main);
+}
+footer .row .col-md-6 {
+  color: var(--font-main);
+}
+/*--------------------------------------------------------------
+# Portfolio Page
+--------------------------------------------------------------*/
+#portfolioAll {
+  background: var(--linear);
+  background-repeat: no-repeat;
+}
+#portfolioAll > .container-fluid {
+  background-image: url(../images/Rectangle.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right center;
+}
+
+#portfolioAll h1,
+#portfolioAll p,
+#portfolioAll a {
+  color: var(--font-main);
+}
+#portfolioAll h1 {
+  font-size: 48px;
+}
+#portfolioAll p {
+  font-size: 20px;
+}
+#portfolioAll a {
+  text-decoration: none;
+  font-size: 20px;
+}
+#projects h2 {
+  font-size: 48px;
+}
+#projects .card {
+  border-radius: 16px;
+}
+#projects a.btn {
+  background: var(--linear);
+  background-repeat: no-repeat;
+  color: var(--font-dark);
+}
+/*--------------------------------------------------------------
+# Reels Page
+--------------------------------------------------------------*/
+#reelAll {
+  background: var(--linear);
+  background-repeat: no-repeat;
+}
+#reelAll h1,
+#reelAll p,
+#reelAll a {
+  color: var(--font-main);
+}
+#reelAll h1 {
+  font-size: 48px;
+}
+#reelAll p {
+  font-size: 20px;
+}
+#reelAll a {
+  text-decoration: none;
+  font-size: 20px;
+}
+#allReels h2 {
+  font-size: 48px;
+}
+#allReels .card {
+  border-radius: 16px;
+}
+#allReels .card iframe {
+  height: 300px;
+  border-radius: 16px;
+}
+#allReels .card .blackout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 332px;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#allReels .card .blackout:hover {
+  cursor: pointer;
+}
+#allReels .card .blackout i {
+  font-size: 65px;
+  color: rgba(255, 255, 255, 0.75);
+}
+.showReel {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 65465187496548;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.showReel iframe {
+  width: 80%;
+  height: 80%;
+}
+.hidden {
+  display: none;
+}
+.bigScreen:hover {
+  cursor: pointer;
+}
+/*--------------------------------------------------------------
+# contact-us page
+--------------------------------------------------------------*/
+#contact-us h4 {
+  font-size: 48px;
+  transition: all 0.3s;
+}
+#contact-us iframe {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+}
+/* contact us thanks message */
+
+.thank-message .show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  color: var(--font-main);
+}
+.thank-message .show .row:first-child {
+  background: var(--linear);
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+.thank-message .show .row a.btn {
+  background: var(--linear);
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  color: var(--font-main);
+}
+.thank-message .show .row button.btn {
+  background: var(--lm-body);
+  border-radius: 16px;
+  color: var(--dm-body);
+}
+.thank-message .show .row i {
+  font-size: 80px;
+}
+/*--------------------------------------------------------------
+# Project page
+--------------------------------------------------------------*/
+#projectImg a.btn {
+  background-color: var(--font-main);
+  padding: var(--btn-back);
+  font-size: 16px;
+}
+#projectImg h4 {
+  color: var(--main);
+}
+#projectImg button {
+  background: var(--linear);
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  color: var(--font-main);
+}
+#projectImg .main-image img {
+  box-shadow: 0px 0px 10px var(--main);
+  border-radius: 16px;
+}
+#ourProjects h2 {
+  position: relative;
+}
+#ourProjects h2::before,
+#ourProjects h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  transform: translateY(-50%);
+}
+#ourProjects h2::before {
+  left: 0;
+}
+#ourProjects h2::after {
+  right: 0;
+}
+#ourProjects .swiper-slide .card {
+  border-radius: 8px;
+}
+#ourProjects .swiper-slide .card a.btn {
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+#project-content h3 {
+  font-size: 20px;
+}
+#project-content p,
+#project-content ol li {
+  font-size: 20px;
+}
+
+/*--------------------------------------------------------------
+# Category Page fady
+--------------------------------------------------------------*/
+#category {
+  /* background-image: var(--linear); */
+  background-color: #494b52;
+  background-image: url("../images/Group 1000003898.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#category .row1 {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+/* #category .content {
+  text-align: center;
+} */
+#category .content h2 {
+  color: var(--font-main);
+  font-size: 64px;
+}
+#category .content p {
+  color: var(--font-main);
+  font-family: var(--font-family);
+  font-size: 20px;
+}
+#category .button {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 9px 12px;
+  gap: 8px;
+  height: 50px;
+  width: 200px;
+  border: none;
+  background-image: var(--linear);
+  border-radius: 100px;
+  cursor: pointer;
+}
+#category .lable {
+  line-height: 22px;
+  font-size: 16px;
+  color: var(--font-main);
+  font-family: var(--font-family);
+}
+#category a.btn1 {
+  background-image: var(--linear);
+  color: var(--font-main);
+  border: none;
+}
+#category a.btn2 {
+  background-color: var(--font-dark);
+  color: var(--main);
+  border: none;
+}
+#category .border-icon {
+  background-color: #c4d1f1;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  padding: 7px 6px;
+  margin-left: -5px;
+}
+#category .card {
+  border-radius: 12px;
+}
+#category .card img {
+  border-radius: 6px;
+}
+#category .card-body {
+  padding: 5px 15px;
+}
+/*--------------------------------------------------------------
+# JobSearch page
+--------------------------------------------------------------*/
+#jobSearch {
+  background: var(--linear);
+}
+#jobSearch .container-fluid {
+  color: var(--font-dark);
+  background-image: url(../images/JobSearchBg.png);
+  background-attachment: contain;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#jobSearch h1 {
+  font-size: 48px;
+}
+#jobSearch form option {
+  line-height: 50px;
+}
+#jobSearch form button {
+  background: var(--linear);
+  background-repeat: no-repeat;
+  color: var(--font-dark);
+}
+#jobResults {
+  min-height: 40vh;
+}
+
+#jobResults .top-text a.btn {
+  background: var(--linear);
+  background-repeat: no-repeat;
+  color: var(--font-main);
+}
+#jobResults .card img {
+  height: 120px;
+}
+#jobResults a {
+  color: var(--font-main);
+  text-decoration: none;
+}
+#jobResults a .card-footer {
+  background: var(--linear);
+}
+#jobResults .card-body {
+  color: var(--main);
+}
+#jobResults .allsolutions div a {
+  text-decoration: none;
+}
+#jobResults .allsolutions div a .container {
+  border-radius: 20px;
+}
+#jobResults .allsolutions .row i {
+  font-size: 50px;
+}
+#jobResults .allsolutions .container p {
+  font-size: 16px;
+}
+/*--------------------------------------------------------------
+# Job Details Page
+--------------------------------------------------------------*/
+#jobDetails {
+  background-image: url(../images/JobSearchBg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#jobDetails p {
+  font-size: 20px;
+}
+#jobDetails .row div i,
+#jobDetails .row div span {
+  font-size: 20px;
+}
+
+#jobReq .col-lg-3 .btn:first-child {
+  background: var(--linear);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: var(--font-main);
+  border: none;
+}
+#summary .layout,
+#apply .layout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99999999999991;
+  overflow-y: scroll;
+}
+#summary .layout::-webkit-scrollbar,
+#apply .layout::-webkit-scrollbar {
+  display: none;
+}
+#summary .layout .container-fluid i,
+#apply .layout .container-fluid i {
+  font-size: 32px;
+}
+#summary .layout .container-fluid i:hover,
+#apply .layout .container-fluid i:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+#apply .container {
+  z-index: 99999999999992;
+  border-radius: 12px;
+}
+
+#apply form label.d-block {
+  cursor: pointer;
+}
+#apply form button.btn {
+  background: var(--linear);
+  background-repeat: no-repeat;
+  border: none;
+  color: var(--font-main);
+}
+
+#summary span.form-control {
+  background-color: transparent;
+  border: none;
+}
+#summary button.btn.submit {
+  background: var(--linear);
+  background-repeat: no-repeat;
+  color: var(--font-main);
+  border-radius: 12px;
+}
+
+#summary a.btn {
+  border-radius: 12px;
+}
+#summary .user-summary {
+  position: relative;
+  z-index: 99999999999992;
+}
+#summary #exit {
+  background: var(--linear);
+  color: var(--font-main);
+  border-radius: 12px;
+  background-repeat: no-repeat;
+}
+#apply .invalid {
+  border: 2px solid red !important;
+}
+/*--------------------------------------------------------------
+# Access page
+--------------------------------------------------------------*/
+#access {
+  background: var(--linear);
+}
+#access > .container-fluid {
+  background: url(../images/Group\ 1000003898.png);
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 80vh;
+}
+#access .card .nav-underline .nav-link {
+  border: none;
+  font-size: 24px;
+}
+
+#access .card .tab-content form button {
+  background: var(--linear);
+  background-repeat: none;
+  border: none;
+}
+#access .card .nav-underline .nav-link.active,
+.nav-underline .nav-link:focus,
+.nav-underline .nav-link:hover {
+  border: none;
+  text-decoration: underline;
+}
+#access input[type="checkbox"] {
+  background-color: rgb(233, 233, 233);
+}
+#access input:checked[type="checkbox"] {
+  background-color: rgb(141, 141, 141);
+}
+/*--------------------------------------------------------------
+# Extra Plugins
+--------------------------------------------------------------*/
+/* === (swiper) === */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  background: var(--linear);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#portfolio .more-projects a {
+  background: var(--linear);
+  background-repeat: no-repeat;
+  color: var(--font-main);
+}
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+/*--------------------------------------------------------------
+# profile & Edit profile pages
+--------------------------------------------------------------*/
+#profile {
+  background-image: var(--linear);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: var(--font-main);
+}
+
+#user-profile {
+  margin-top: -50px;
+}
+
+#user-profile .navbar .edt-pro a.btn,
+#user-profile .navbar .upd-pro button.btn {
+  background-image: var(--linear);
+  color: var(--font-main);
+  background-repeat: no-repeat;
+}
+
+#user-profile .navbar .upd-pro a.btn .container {
+  background-image: var(--linear);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#user-profile input:read-only:focus {
+  box-shadow: none;
+  border-color: #dee2e6;
+}
+#user-profile .cl::file-selector-button {
+  display: none;
+}
+#user-profile .cl-2 {
+  background-image: var(--linear);
+  color: var(--font-main);
+}
+/*--------------------------------------------------------------
+# TrackApplications page
+--------------------------------------------------------------*/
+#trackApplications {
+  background: var(--linear);
+}
+
+#trackApplications .container-fluid {
+  color: var(--font-dark);
+  background-image: url(../images/JobSearchBg.png);
+  background-attachment: cover;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#trackApplications .GoBack-icon {
+  color: var(--main);
+  font-size: 16px;
+  text-decoration: none;
+  background-color: var(--font-main);
+  width: auto;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+#jobCards {
+  margin-top: -150px;
+  min-height: 60vh;
+}
+#jobCards .card {
+  border: none;
+}
+
+#jobCards button.card-footer {
+  background: var(--linear);
+  color: var(--font-main);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+}
+
+/* ===================================== */
+#jobCards .viewed {
+  background-color: #bee2fd;
+  color: #0d70ba;
+}
+#jobCards .consideration {
+  background-color: #fdf1bb;
+  color: #916000;
+}
+#jobCards .notSelected {
+  color: #ff5c00;
+  background-color: #ffd1b8;
+}
+#jobCards .notViewed {
+  color: #606060;
+  background-color: #dddddd;
+}
+#jobCards .selected {
+  color: #34a300;
+  background-color: #c7f0ca;
+}
+#jobCards .closed {
+  background-color: #e72828;
+  color: #fffcfc;
+}
+
+/*--------------------------------------------------------------
+# Resources
+--------------------------------------------------------------*/
+#resources,
+#events {
+  background: var(--linear);
+  color: var(--font-dark);
+}
+#resources .container-fluid {
+  background-image: url(../images/JobSearchBg.png);
+  background-attachment: contain;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#blog .position-absolute {
+  color: var(--font-main);
+}
+
+/*--------------------------------------------------------------
+# Media Query
+--------------------------------------------------------------*/
+@media (max-width: 992px) {
+  #reels .mini-cards .col-sm-6:nth-child(3),
+  #reels .mini-cards .col-sm-6:nth-child(4) {
+    display: none;
+  }
+  #contact-us form button.btn {
+    width: 100%;
+  }
+  #contact-us .frame {
+    height: 100vh;
+  }
+  #ourProjects h2::before,
+  #ourProjects h2::after {
+    width: 35%;
+  }
+  #jobDetails {
+    background-size: cover;
+  }
+  footer .nav-item a.scroll-top {
+    width: 10%;
+    margin: auto;
+  }
+}
+@media (max-width: 768px) {
+  #portfolioAll > .container-fluid {
+    background-image: url(../images/Rectangle-mb.png);
+    background-size: auto 80%;
+    background-position: right top;
+  }
+  #reels iframe {
+    max-height: 300px;
+  }
+  #reels .card-body h5,
+  #reels .card-body p {
+    font-size: 16px;
+  }
+
+  #ourProjects h2::before,
+  #ourProjects h2::after {
+    width: 30%;
+  }
+  .content h2 {
+    font-size: 54px;
+    font-weight: 540;
+  }
+  .content p {
+    font-size: 16px;
+  }
+  .broder-MYbtn {
+    justify-content: space-between !important;
+  }
+}
+@media (max-width: 576px) {
+  #portfolioAll > .container-fluid {
+    background-image: url(../images/Rectangle-mb.png);
+    background-size: auto 60%;
+    background-position: right top;
+  }
+  #portfolio .swiper .card {
+    width: 80%;
+  }
+  footer .nav-item a.scroll-top {
+    width: 15%;
+    margin: auto;
+  }
+  #ourProjects h2::before,
+  #ourProjects h2::after {
+    width: 25%;
+  }
+  .broder-MYbtn {
+    justify-content: space-around !important;
+  }
+  #category .content h2 {
+    font-size: 45px;
+  }
+  #jobResults .card img {
+    height: auto;
+  }
+  #jobResults .card h2 {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+}

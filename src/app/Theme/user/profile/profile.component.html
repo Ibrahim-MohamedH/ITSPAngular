@@ -1,0 +1,187 @@
+<section id="profile" class="py-5">
+  <div class="main py-5">
+    <div class="container">
+      <div class="row">
+        <h1 class="display-5 fw-semibold">Hello Zeyad</h1>
+        <p class="fs-4">
+          This is your profile page. You can see the progress you've made with
+          your profile and manage your profile details
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="user-profile" class="px-sm-0 px-2">
+  <div class="container pb-5">
+    <div class="row container-form pb-5 rounded-4">
+      <div
+        class="navbar rounded-4 justify-content-center align-items-center col-12 px-md-4 px-2"
+      >
+        <div class="col-lg-10 col-md-9 col-sm-8 col-12">
+          <a
+            class="nav-link nav-profile d-flex align-items-center pe-0"
+            href="#"
+          >
+            <img
+              src="assets/images/photo.png"
+              alt="Profile"
+              class="rounded-circle"
+              width="60"
+              height="60"
+            />
+            <span class="ps-3 user-name fs-4 fw-semibold"
+              >Zeyad.abdelazim
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-lg-2 col-md-3 col-sm-4 edt-pro col-12 text-center mb-sm-0 mb-2"
+        >
+          <a routerLink="/edit_profile" class="btn px-sm-4 px-5"
+            >Edit Profile</a
+          >
+        </div>
+      </div>
+      <!-- ueser Information -->
+      <div class="main-user-input col-12 px-4 mt-3">
+        <h4 class="py-4">User Information</h4>
+        <div class="row gx-5 gy-3">
+          <div class="col-md-6">
+            <label for="inputName" class="form-label">Full Name</label>
+            <input
+              type="text"
+              value="Zeyad.abdelazim"
+              id="inputName"
+              class="form-control"
+              readonly
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail4"
+              value="Zeyad98@gmail.com"
+              readonly
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="inputState" class="form-label">Gender</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputState"
+              value="Male"
+              readonly
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <div class="input-group mb-3">
+              <input
+                type="password"
+                placeholder="****************"
+                class="form-control"
+                id="inputPassword4"
+                readonly
+              />
+              <!-- show only in edit page -->
+              <button class="btn btn-outline-secondary" id="button-addon2">
+                <i class="fa-regular fa-eye-slash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-8">
+            <label for="inputDate" class="form-label">Birth year</label>
+            <div class="col-12 row">
+              <div class="col-sm-4 mb-sm-0 mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Year"
+                  value="2000"
+                  readonly
+                />
+              </div>
+              <div class="col-sm-4 mb-sm-0 mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Year"
+                  value="Jan"
+                  readonly
+                />
+              </div>
+              <div class="col-sm-4 mb-sm-0 mb-3">
+                <input
+                  type="text"
+                  placeholder="Day"
+                  class="form-control"
+                  value="01"
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end user Information -->
+      <div class="col-12 px-4 my-4">
+        <hr />
+      </div>
+      <!--Contact Information  -->
+      <div class="main-user-input col-12 px-4">
+        <h4 class="py-4">Contact Information</h4>
+        <div class="row gx-5 gy-4">
+          <div class="col-md-6">
+            <label for="inputcity" class="form-label">City</label>
+            <input
+              type="text"
+              value="Giza"
+              id="inputcity"
+              class="form-control"
+              readonly
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="inputarea" class="form-label">Area</label>
+            <input
+              type="email"
+              value="Haram"
+              class="form-control"
+              id="inputarea"
+              readonly
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="inputnumber" class="form-label">Phone Number</label>
+            <input
+              type="tel"
+              value="Haram"
+              class="form-control"
+              id="inputnumber"
+              readonly
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="formFile" class="form-label">File Upload</label>
+            <div class="input-group mb-3">
+              <label class="input-group-text cl-2" for="formFile"
+                ><i class="fa-regular fa-file pe-2"></i> CV</label
+              >
+              <input
+                type="text"
+                value="File Name"
+                class="form-control cl"
+                id="formFile"
+                readonly
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end Contact Information  -->
+    </div>
+  </div>
+</section>

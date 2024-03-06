@@ -1,0 +1,128 @@
+<!-- contact us -->
+<section id="contact-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 px-sm-5 py-5">
+        <h4 class="mb-3 fw-bold">Contact Us</h4>
+        <p>Reach new markets, engage new audiences. We're just a click away!</p>
+
+        <p class="fw-bold">Think global, connect everywhere. Let's chat!</p>
+        <form action="">
+          <div class="form-group mb-2">
+            <label for="name" class="form-label fw-bold">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              [(ngModel)]="name"
+              name="name"
+              class="form-control"
+              placeholder="Full Name"
+            />
+          </div>
+          <div class="form-group mb-2">
+            <label for="company" class="form-label fw-bold">Company Name</label>
+            <input
+              type="text"
+              id="company"
+              [(ngModel)]="company"
+              name="company"
+              class="form-control"
+              placeholder="Company Name"
+            />
+          </div>
+          <div class="form-group mb-2">
+            <label for="url" class="form-label fw-bold">Website Link</label>
+            <input
+              type="text"
+              id="url"
+              [(ngModel)]="url"
+              name="url"
+              class="form-control"
+              placeholder="Website Link"
+            />
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="email" class="form-label fw-bold">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              [(ngModel)]="email"
+              class="form-control"
+              placeholder="Email Address"
+            />
+          </div>
+          <div class="form-group mb-2">
+            <label for="phone" class="form-label fw-bold">Phone Number</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              [(ngModel)]="phone"
+              class="form-control"
+              placeholder="Phone"
+            />
+          </div>
+          <div class="form-group mb-2">
+            <label for="extra" class="form-label fw-bold">Extra Info</label>
+            <textarea
+              name="extra"
+              [(ngModel)]="extra"
+              id="extra"
+              cols="30"
+              rows="10"
+              class="form-control"
+              placeholder="Extra Info"
+            ></textarea>
+          </div>
+          <div class="form-group mt-sm-5 mt-4">
+            <button (click)="submit()" class="btn px-5 py-3">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-6 px-0 frame">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d215.9893052371092!2d31.152153591619044!3d29.98434731990307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1707302162765!5m2!1sen!2seg"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =================================== -->
+<div class="thank-message" *ngIf="thankYouMessage">
+  <div class="show row align-items-center justify-content-center">
+    <div class="col-xl-6 col-lg-7 col-md-8 col-11">
+      <div class="container">
+        <div class="row p-sm-4 px-3 py-5">
+          <div class="col-sm-10 order-sm-1 order-2 text-sm-start text-center">
+            <h3 class="mb-3">Thank you for your trust</h3>
+            <p class="mb-5">we will contact you soon</p>
+            <div class="row justify-content-sm-around justify-content-center">
+              <a routerLink="" class="btn col-sm-5 order-sm-1 order-2 col-8"
+                >Back to Home</a
+              >
+              <button
+                (click)="close()"
+                class="btn close col-sm-5 col-8 order-sm-2 order-1 mb-sm-0 mb-3"
+              >
+                Contact Us again
+              </button>
+            </div>
+          </div>
+          <div
+            class="col-sm-2 d-flex align-items-center justify-content-center order-sm-2 order-1 mb-sm-0 mb-4"
+          >
+            <i class="fa-regular fa-handshake"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

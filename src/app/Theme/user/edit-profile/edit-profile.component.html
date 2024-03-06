@@ -1,0 +1,188 @@
+<section id="profile" class="py-5">
+  <div class="main py-5">
+    <div class="container">
+      <div class="row">
+        <h1 class="display-5 fw-semibold">Hello Zeyad</h1>
+        <p class="fs-4">
+          This is your profile page. You can see the progress you've made with
+          your profile and manage your profile details
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="user-profile" class="px-sm-0 px-2 pb-5">
+  <div class="container">
+    <div class="row container-form pb-5 rounded-4">
+      <form class="pb-3 px-0" action="" method="post">
+        <div
+          class="navbar rounded-4 justify-content-center align-items-center col-12 px-md-4 px-2"
+        >
+          <div class="col-lg-8 col-md-7 col-12">
+            <a
+              class="nav-link nav-profile d-flex align-items-center pe-0"
+              href="#"
+            >
+              <img
+                src="assets/images/photo.png"
+                alt="Profile"
+                class="rounded-circle"
+                width="60"
+                height="60"
+              />
+              <span class="ps-3 user-name fs-4 fw-semibold"
+                >Zeyad.abdelazim
+              </span>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-5 col-12 upd-pro text-end mb-sm-0 mb-2">
+            <button type="submit" class="btn col-4 me-2">Save</button>
+            <a routerLink="/profile" class="btn col-md-3 col-4 text-reset px-3"
+              ><div class="container">Cancel</div></a
+            >
+          </div>
+        </div>
+        <!-- ueser Information -->
+        <div class="main-user-input col-12 px-4 mt-3">
+          <h4 class="py-4">User Information</h4>
+          <div class="row gx-5 gy-3">
+            <div class="col-md-6">
+              <label for="editName" class="form-label">Full Name</label>
+              <input
+                type="text"
+                value="Zeyad.abdelazim"
+                id="editName"
+                name="name"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="editEmail" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="editEmail"
+                name="email"
+                value="Zeyad98@gmail.com"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="editState" class="form-label">Gender</label>
+              <select id="editState" name="gender" class="form-select">
+                <option selected>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="editPassword" class="form-label">Password</label>
+              <div class="input-group mb-3">
+                <input
+                  type="password"
+                  placeholder="***********"
+                  class="form-control"
+                  id="editPassword"
+                  name="password"
+                />
+                <!-- show only in edit page -->
+                <button class="btn btn-outline-secondary" id="button-addon2">
+                  <i class="fa-regular fa-eye-slash"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-8">
+              <label class="form-label">Birth year</label>
+              <div class="col-12 row">
+                <div class="col-sm-4 mb-sm-0 mb-3">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="year"
+                    placeholder="Year"
+                  />
+                </div>
+                <div class="col-sm-4 mb-sm-0 mb-3">
+                  <select name="month" class="form-select">
+                    <option disabled selected>Month</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                  </select>
+                </div>
+                <div class="col-sm-4 mb-sm-0 mb-3">
+                  <input
+                    type="text"
+                    placeholder="Day"
+                    name="day"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end user Information -->
+        <div class="col-12 px-4 my-4">
+          <hr />
+        </div>
+        <!--Contact Information  -->
+        <div class="main-user-input col-12 px-4">
+          <h4 class="py-4">Contact Information</h4>
+          <div class="row gx-5 gy-4">
+            <div class="col-md-6">
+              <label for="editCity" class="form-label">City</label>
+              <input
+                type="text"
+                value="Giza"
+                id="editCity"
+                name="city"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="editArea" class="form-label">Area</label>
+              <input
+                type="text"
+                value="Haram"
+                class="form-control"
+                id="editArea"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="editNumber" class="form-label">Phone Number</label>
+              <input
+                type="text"
+                value="Haram"
+                class="form-control"
+                id="editNumber"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="formFile" class="form-label">File Upload</label>
+              <div class="input-group mb-3">
+                <label class="input-group-text cl-2" for="formFile"
+                  ><i class="fa-regular fa-file pe-2"></i> CV</label
+                >
+                <input
+                  type="file"
+                  class="form-control cl"
+                  id="formFile"
+                  name="file"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end Contact Information  -->
+      </form>
+    </div>
+  </div>
+</section>
