@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
+import * as AOS from 'aos'; // Import AOS
 @Component({
   selector: 'app-job-available',
   templateUrl: './job-available.component.html',
@@ -27,5 +27,12 @@ export class JobAvailableComponent {
       this.slogan =
         'Unleash the full potential of your brand with our marketing magic!';
     }
+  }
+  ngOnInit() {
+    AOS.init({
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
+    });
   }
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import SwiperCore, { SwiperOptions, Autoplay, Navigation } from 'swiper';
+import * as AOS from 'aos'; // Import AOS
 SwiperCore.use([Navigation, Autoplay]);
 @Component({
   selector: 'app-about-us',
@@ -39,6 +40,11 @@ export class AboutUsComponent {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       }
+    });
+    AOS.init({
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
     });
   }
 }
