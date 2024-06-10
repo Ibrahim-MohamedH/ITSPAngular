@@ -3,7 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProjectService } from 'src/app/controllers/services/project.service';
 import { ReelService } from 'src/app/controllers/services/reel.service';
 import SwiperCore, { SwiperOptions, Autoplay, Navigation } from 'swiper';
-
+// =====================
+import * as AOS from 'aos'; // Import AOS
 SwiperCore.use([Navigation, Autoplay]);
 
 @Component({
@@ -114,6 +115,12 @@ export class HomeComponent {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       }
+    });
+    // ==================AOS==================
+    AOS.init({
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
     });
     // =======================================
     let mainReel: any = document.querySelector('#reels .mainReel');

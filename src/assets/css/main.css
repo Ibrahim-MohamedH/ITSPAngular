@@ -33,6 +33,9 @@
 *::first-letter {
   text-transform: capitalize;
 }
+body {
+  overflow-x: hidden;
+}
 /* html {
   background: var(--linear);
 } */
