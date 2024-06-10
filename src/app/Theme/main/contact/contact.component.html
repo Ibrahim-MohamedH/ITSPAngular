@@ -1,15 +1,30 @@
 <!-- contact us -->
 <section id="contact-us">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-6 px-sm-5 py-5">
-        <h4 class="mb-3 fw-bold">Contact Us</h4>
-        <p>Reach new markets, engage new audiences. We're just a click away!</p>
+      <div class="col-12 px-0 frame">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d215.9893052371092!2d31.152153591619044!3d29.98434731990307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1707302162765!5m2!1sen!2seg"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="col-12 px-sm-5 py-5">
+        <div class="text-center">
+          <h1 class="mb-3 fw-bold">Contact Us</h1>
+          <p>
+            Reach new markets, engage new audiences. We're just a click away!
+          </p>
 
-        <p class="fw-bold">Think global, connect everywhere. Let's chat!</p>
-        <form action="">
+          <p class="fw-bold">Think global, connect everywhere. Let's chat!</p>
+        </div>
+        <form class="col-xl-5 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
           <div class="form-group mb-2">
-            <label for="name" class="form-label fw-bold">Full Name</label>
+            <label for="name" class="form-label fw-bold"
+              >Full Name<span>*</span></label
+            >
             <input
               type="text"
               id="name"
@@ -19,8 +34,37 @@
               placeholder="Full Name"
             />
           </div>
+          <div class="form-group mb-3">
+            <label for="phone" class="form-label fw-bold"
+              >Phone<span>*</span></label
+            >
+            <div class="row mx-0">
+              <div class="col-xl-2 col-lg-3 col-md-3 col-4 px-0">
+                <select
+                  required
+                  name="country_code"
+                  class="form-select form-select-lg"
+                >
+                  <!-- [(ngModel)]="country_code" -->
+                  <option value="+20">+20</option>
+                </select>
+              </div>
+              <div class="col-xl-10 col-lg-9 col-md-9 col-8 pe-0">
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  id="phone"
+                  name="phone"
+                  [(ngModel)]="phone"
+                  required
+                />
+              </div>
+            </div>
+          </div>
           <div class="form-group mb-2">
-            <label for="company" class="form-label fw-bold">Company Name</label>
+            <label for="company" class="form-label fw-bold"
+              >Company Name<span>*</span></label
+            >
             <input
               type="text"
               id="company"
@@ -31,7 +75,9 @@
             />
           </div>
           <div class="form-group mb-2">
-            <label for="url" class="form-label fw-bold">Website Link</label>
+            <label for="url" class="form-label fw-bold"
+              >Website Link<span>*</span></label
+            >
             <input
               type="text"
               id="url"
@@ -43,7 +89,9 @@
           </div>
 
           <div class="form-group mb-2">
-            <label for="email" class="form-label fw-bold">Email Address</label>
+            <label for="email" class="form-label fw-bold"
+              >Email Address<span>*</span></label
+            >
             <input
               type="email"
               id="email"
@@ -54,7 +102,9 @@
             />
           </div>
           <div class="form-group mb-2">
-            <label for="phone" class="form-label fw-bold">Phone Number</label>
+            <label for="phone" class="form-label fw-bold"
+              >Service needed<span>*</span></label
+            >
             <input
               type="text"
               id="phone"
@@ -65,7 +115,7 @@
             />
           </div>
           <div class="form-group mb-2">
-            <label for="extra" class="form-label fw-bold">Extra Info</label>
+            <label for="extra" class="form-label fw-bold">Extra Info!</label>
             <textarea
               name="extra"
               [(ngModel)]="extra"
@@ -77,34 +127,27 @@
             ></textarea>
           </div>
           <div class="form-group mt-sm-5 mt-4">
-            <button (click)="submit()" class="btn px-5 py-3">
+            <button (click)="submit()" class="btn w-100 py-3">
               Send Message
             </button>
           </div>
         </form>
-      </div>
-      <div class="col-lg-6 px-0 frame">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d215.9893052371092!2d31.152153591619044!3d29.98434731990307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1707302162765!5m2!1sen!2seg"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
       </div>
     </div>
   </div>
 </section>
 <!-- =================================== -->
 <div class="thank-message" *ngIf="thankYouMessage">
-  <div class="show row align-items-center justify-content-center">
-    <div class="col-xl-6 col-lg-7 col-md-8 col-11">
+  <div class="show row justify-content-center mx-0 pt-5">
+    <div class="col-xl-6 col-lg-7 col-md-8 col-11 mt-5">
       <div class="container">
         <div class="row p-sm-4 px-3 py-5">
           <div class="col-sm-10 order-sm-1 order-2 text-sm-start text-center">
             <h3 class="mb-3">Thank you for your trust</h3>
             <p class="mb-5">we will contact you soon</p>
-            <div class="row justify-content-sm-around justify-content-center">
+            <div
+              class="row justify-content-sm-around justify-content-center mx-0"
+            >
               <a routerLink="" class="btn col-sm-5 order-sm-1 order-2 col-8"
                 >Back to Home</a
               >

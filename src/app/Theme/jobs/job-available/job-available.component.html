@@ -2,26 +2,31 @@
   <div class="container-fluid py-5">
     <div class="container mb-5 pb-5 fw-bold">
       <h1 class="text-center pb-5">
-        <span>we ‘re - </span> <br />
+        we ‘re - <br />
         <span class="ms-5 ps-5"
-          ><i class="fa-solid fa-arrow-right"></i> hiring.</span
-        >
+          ><i class="fa-solid fa-arrow-right-long"></i
+        ></span>
+        hiring.
       </h1>
       <form action="" method="get">
         <div class="row align-items-end">
           <div class="form-group mb-lg-0 mb-3 col-lg-5 col-md-12">
-            <label for="searchInput" class="form-label">Job</label>
+            <label for="searchInput" class="form-label">Job Title</label>
             <input
               type="text"
               name="search"
               id="searchInput"
-              class="form-control"
-              placeholder="Job Title"
+              class="form-control form-control-lg"
+              placeholder="Search by job title"
             />
           </div>
           <div class="form-group mb-lg-0 mb-3 col-lg-3 col-md-6">
             <label for="categoryInput" class="form-label">category</label>
-            <select class="form-select" name="category" id="categoryInput">
+            <select
+              class="form-select form-select-lg"
+              name="category"
+              id="categoryInput"
+            >
               <option value="software house">Software House</option>
               <option value="business">Business</option>
               <option value="marketing">Marketing</option>
@@ -30,14 +35,18 @@
           </div>
           <div class="form-group mb-lg-0 mb-3 col-lg-3 col-md-6">
             <label for="jobStatusInput" class="form-label">Job Status</label>
-            <select class="form-select" name="status" id="jobStatusInput">
+            <select
+              class="form-select form-select-lg"
+              name="status"
+              id="jobStatusInput"
+            >
               <option value="on-site">on-site</option>
               <option value="remotely">remotely</option>
               <option value="hybrid">hybrid</option>
             </select>
           </div>
           <div class="form-group col-lg-1 px-lg-0 text-end">
-            <button class="btn fw-semibold px-lg-0 px-4 col-lg-12">
+            <button class="btn btn-lg fw-semibold px-lg-0 px-4 col-lg-12">
               <i class="fa-solid fa-magnifying-glass"></i> Search
             </button>
           </div>
@@ -51,13 +60,14 @@
     <div class="row">
       <div class="col-12 text-center mb-4 top-text">
         <h2 class="col-lg-6 col-md-8 col-12 mx-auto fs-1 fw-bold">
-          <span>Jobs</span>
+          {{ category }}
         </h2>
         <p class="col-lg-5 col-md-7 mx-auto">
-          Welcome to the job page, your ultimate destination for unleashing
-          creativity through captivating short-form videos!
+          {{ slogan }}
         </p>
-        <a routerLink="#" class="btn rounded-3 px-4 py-2">View Applications</a>
+        <a routerLink="/login" class="btn rounded-3 px-4 py-2"
+          >View Applications</a
+        >
       </div>
       <!-- Start of card -->
       <div class="col-lg-6 mb-3">
@@ -124,7 +134,7 @@
             </div>
             <div class="col-8">
               <div class="card-body">
-                <h2 class="card-title">UI/UX</h2>
+                <h2 class="card-title">TESTER</h2>
                 <p class="card-text">
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content.
@@ -150,7 +160,7 @@
             </div>
             <div class="col-8">
               <div class="card-body">
-                <h2 class="card-title">Frontend</h2>
+                <h2 class="card-title">BACKEND</h2>
                 <p class="card-text">
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content.

@@ -1,5 +1,5 @@
 body {
-  background-color: var(--lm-body);
+  background-color: #ffffff;
 }
 /*--------------------------------------------------------------
 # navbar
@@ -14,82 +14,67 @@ nav .nav-item button.btn i {
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
-#hero h1 span {
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+#hero h1,
 #hero p {
-  color: var(--main);
+  color: var(--black);
 }
 /*--------------------------------------------------------------
 # AboutUs page
 --------------------------------------------------------------*/
-#aboutCard-1 h2 span {
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+#aboutCard-3,
+#aboutCard-1 h2,
 #aboutCard-1 p {
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--black);
 }
-#aboutCard-3 h2 span {
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* =========== */
+#aboutCard-3 swiper .card {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
-#aboutCard-3 #navbar-about-us a,
-#aboutCard-3 .scrollspy-about-us h4 span,
-#aboutCard-7 h2 span,
-#aboutCard-7 .col-12 p,
-#aboutCard-7 .col-12 p span {
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+#aboutCard-3 .swiper-button-next:after {
+  font-family: FontAwesome;
+  content: "\f061";
 }
-#aboutCard-3 p {
-  color: var(--second-dark-color);
+#aboutCard-3 .swiper-button-prev:after {
+  font-family: FontAwesome;
+  content: "\f060";
 }
-#aboutCard-3 .scrollspy-about-us::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
+#aboutCard-3 .swiper-button-prev:after,
+#aboutCard-3 .swiper-button-next:after {
+  color: var(--black);
+  border: 2px solid var(--black);
+  background-color: var(--font-main);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  font-size: 30px;
+  padding: 3px 5px;
+  line-height: normal;
 }
-#aboutCard-3 .scrollspy-about-us::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 12px;
-}
+/* =========== */
+
 #aboutCard-6 .mini-card {
   background-color: var(--font-main);
-  color: var(--main);
+  color: var(--black);
 }
-#aboutCard-6 .mini-card h4 span {
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+#aboutCard-7 {
+  background-color: var(--font-dark);
 }
 #aboutCard-7 > .container {
   background-color: var(--font-main);
+  color: var(--black);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
 }
 #aboutCard-7 > .container .col-12 {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
 }
 /*--------------------------------------------------------------
 # solutions
 --------------------------------------------------------------*/
 
-#solutions h3 {
-  color: var(--font-main);
-}
+#solutions h2,
 #solutions > .container > p {
-  color: var(--font-main);
+  color: #f4f4f4;
 }
 #solutions .allsolutions div a .container {
   background-color: var(--font-main);
@@ -99,14 +84,9 @@ nav .nav-item button.btn i {
 #solutions .allsolutions a {
   color: var(--font-main);
 }
-#solutions #software span,
-#solutions #marketing span,
-#solutions #software i,
-#solutions #marketing i {
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+#solutions #software,
+#solutions #marketing {
+  color: var(--black);
 }
 
 #solutions #software,
@@ -116,41 +96,40 @@ nav .nav-item button.btn i {
 
 #solutions #software:hover,
 #solutions #marketing:hover {
-  background: var(--linear);
+  background: var(--fulvous);
 }
-#solutions #software:hover span,
-#solutions #marketing:hover span,
-#solutions #software:hover i,
-#solutions #marketing:hover i {
+#solutions #software:hover,
+#solutions #marketing:hover {
   color: var(--font-main);
-  background: transparent;
-  background-clip: unset;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: unset;
 }
-#solutions #business {
-  background: var(--linear);
+#solutions #digitalMarketing {
+  background: var(--fulvous);
 }
-#solutions #business:hover {
-  background: unset;
+#solutions #digitalMarketing:hover {
   background-color: var(--font-main);
 }
-#solutions #business:hover span,
-#solutions #business:hover i {
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+#solutions #digitalMarketing:hover,
+#solutions #digitalMarketing:hover {
+  color: var(--black);
 }
-
 /*--------------------------------------------------------------
 # Reels
 --------------------------------------------------------------*/
-#reels .card-body {
-  color: var(--main);
+#reels .reels-text {
+  color: white;
 }
-#reels .more-reels a {
-  background-color: var(--font-dark);
+#reels .reels-text a {
+  color: var(--font-main);
+  background-color: var(--fulvous);
+}
+#reels .card-body {
+  color: var(--black);
+}
+#reels .card-body h5 {
+  font-family: var(--font-headers);
+}
+#reels .card-body a {
+  color: var(--fulvous);
 }
 #reels .card .reelCover i {
   color: var(--font-dark);
@@ -160,13 +139,20 @@ nav .nav-item button.btn i {
 /*--------------------------------------------------------------
 # portfolio
 --------------------------------------------------------------*/
-#portfolio h3,
+#portfolio h2,
 #portfolio p,
 #portfolio h5 {
-  color: var(--main);
+  color: var(--black);
+}
+#portfolio a.btn {
+  background-color: var(--fulvous);
+  color: var(--font-dark);
+}
+#portfolio .swiper-slide .card {
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
 }
 #portfolio .swiper-slide a.btn {
-  background: var(--linear);
+  background-color: var(--fulvous);
   color: var(--font-dark);
 }
 
@@ -182,20 +168,16 @@ nav .nav-item button.btn i {
 /*--------------------------------------------------------------
 # ready
 --------------------------------------------------------------*/
-#ready h2 {
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+#ready {
+  background-color: var(--black);
+  color: white;
 }
 /*--------------------------------------------------------------
 # Portfolio Page
 --------------------------------------------------------------*/
-#projects h2 {
-  color: var(--main);
-}
+
 #projects .card {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
 }
 #projects h3,
 #projects p,
@@ -203,8 +185,7 @@ nav .nav-item button.btn i {
   color: var(--main);
 }
 #projects a.btn {
-  background: var(--linear);
-  background-repeat: no-repeat;
+  background-color: var(--fulvous);
   color: var(--font-dark);
 }
 /*--------------------------------------------------------------
@@ -214,33 +195,35 @@ nav .nav-item button.btn i {
   color: var(--main);
 }
 #allReels .card {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+  border: none;
 }
 #allReels h3,
 #allReels p,
 #allReels h5 {
-  color: var(--main);
+  color: var(--black);
 }
-#allReels a.btn {
-  background: var(--linear);
-  background-repeat: no-repeat;
-  color: var(--font-dark);
+#allReels p small {
+  color: var(--fulvous);
 }
 /*--------------------------------------------------------------
 # contact-us page
 --------------------------------------------------------------*/
-#contact-us h4 {
-  color: var(--main);
+#contact-us h1 {
+  color: var(--black);
 }
 #contact-us p {
   color: var(--main-paragraph);
 }
 #contact-us form label {
-  color: var(--main);
+  color: var(--black);
+}
+#contact-us form label span {
+  color: var(--fulvous);
 }
 #contact-us form button.btn {
-  background: var(--linear);
-  background-repeat: no-repeat;
+  background-color: var(--fulvous);
+  border-radius: 10px;
   color: var(--font-main);
 }
 #contact-us iframe {
@@ -250,13 +233,18 @@ nav .nav-item button.btn i {
 # Project page
 --------------------------------------------------------------*/
 #project-img .main-image img {
-  box-shadow: 0px 0px 10px var(--main);
+  box-shadow: 0px 5px 8px var(--main);
+}
+#project-content,
+#projectImg,
+#ourProjects {
+  background-color: var(--lm-body);
 }
 #project-img h1,
 #project-content,
 #ourProjects h2,
 #ourProjects .swiper-slide .card {
-  color: var(--main);
+  color: var(--black);
 }
 #ourProjects h2::before,
 #ourProjects h2::after {
@@ -286,14 +274,9 @@ nav .nav-item button.btn i {
 #jobResults .card {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
-#jobResults .top-text h2 span {
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+#jobResults .top-text h2,
 #jobResults .top-text p {
-  color: var(--main);
+  color: var(--black);
 }
 #jobResults .allsolutions div a .container {
   background-color: var(--font-main);
@@ -307,10 +290,7 @@ nav .nav-item button.btn i {
 #jobResults #marketing span,
 #jobResults #software i,
 #jobResults #marketing i {
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--black);
 }
 
 #jobResults #software,
@@ -320,69 +300,54 @@ nav .nav-item button.btn i {
 
 #jobResults #software:hover,
 #jobResults #marketing:hover {
-  background: var(--linear);
+  background: var(--fulvous);
 }
 #jobResults #software:hover span,
 #jobResults #marketing:hover span,
 #jobResults #software:hover i,
 #jobResults #marketing:hover i {
   color: var(--font-main);
-  background: transparent;
-  background-clip: unset;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: unset;
 }
-#jobResults #business {
-  background: var(--linear);
+#jobResults #digitalMarketing {
+  background: var(--fulvous);
 }
-#jobResults #business:hover {
-  background: unset;
+#jobResults #digitalMarketing:hover {
   background-color: var(--font-main);
 }
-#jobResults #business:hover span,
-#jobResults #business:hover i {
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+#jobResults #digitalMarketing:hover span,
+#jobResults #digitalMarketing:hover i {
+  color: var(--black);
 }
-
 /*--------------------------------------------------------------
 # Job Details Page
 --------------------------------------------------------------*/
 #jobDetails {
   background-color: #c6c6c6;
 }
-#jobDetails h2 span,
-#jobDetails h3 span {
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+#jobDetails h2 {
+  color: var(--black);
 }
-#jobDetails p {
-  color: var(--main);
-}
-#jobDetails .row div i,
+
+/* #jobDetails .row div i,
 #jobDetails .row div span {
   background: var(--linear);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+} */
+#jobReq {
+  background-color: var(--lm-body);
 }
 #jobReq p,
 #jobReq ul li {
-  color: var(--main);
+  color: var(--black);
 }
 #jobReq .col-lg-3 .btn {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 #jobReq .col-lg-3 .btn:last-child {
   background-color: var(--font-main);
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--fulvous);
 }
 #jobReq h2 span {
   background: var(--linear);
@@ -392,7 +357,8 @@ nav .nav-item button.btn i {
 }
 #summary .layout,
 #apply .layout {
-  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  background-color: rgba(233, 134, 34, 0.3);
 }
 #summary .layout .container-fluid i,
 #apply .layout .container-fluid i {
@@ -401,15 +367,27 @@ nav .nav-item button.btn i {
 #apply .container {
   background-color: var(--font-dark);
 }
+
 #apply h2 {
   background-color: var(--font-main);
 }
-#apply form h2 span,
+#summary h2 span,
+#apply h2 span {
+  color: var(--fulvous);
+}
+/* #apply form h2 span, */
 #apply form label span {
   background: var(--linear);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+#apply form .input-group label {
+  background-color: var(--black);
+  color: var(--font-main);
+}
+#apply form input[type="file"]::file-selector-button {
+  display: none;
 }
 #apply form input[type="text"]::placeholder {
   color: rgba(0, 0, 0, 0.3);
@@ -463,6 +441,9 @@ nav .nav-item button.btn i {
 /*--------------------------------------------------------------
 # profile & Edit profile pages
 --------------------------------------------------------------*/
+#user-profile {
+  background-color: var(--font-dark);
+}
 #user-profile .form-label {
   color: var(--dm-body);
 }
@@ -478,10 +459,7 @@ nav .nav-item button.btn i {
 #user-profile .navbar .upd-pro a.btn {
   background-color: var(--font-dark);
 }
-#user-profile .container-form {
-  background-color: var(--font-dark);
-  box-shadow: 0px 0px 110px 1px rgba(0, 0, 0, 0.37);
-}
+
 /*--------------------------------------------------------------
 # TrackApplications page
 --------------------------------------------------------------*/
@@ -489,38 +467,39 @@ nav .nav-item button.btn i {
   box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.175);
 }
 #jobCards .card-body {
-  color: var(--main);
+  color: var(--black);
 }
 /*--------------------------------------------------------------
 # solutions pages
 --------------------------------------------------------------*/
-#softwareHouse h1,
-#softwareHouse h4,
-#Marketing-BusinessHouse h1,
-#Marketing-BusinessHouse h4,
-#DigitalMarketingHouse h1,
-#DigitalMarketingHouse h4 {
-  background-image: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+#softwareHouse,
+#Marketing-BusinessHouse,
+#DigitalMarketingHouse {
+  color: var(--black);
 }
 /*--------------------------------------------------------------
 # Resources page
 --------------------------------------------------------------*/
-#caseStudy h2 span,
-#blog h2 span {
-  background-image: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+#caseStudy {
+  color: var(--black);
 }
+#caseStudy swiper .card {
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
 /*--------------------------------------------------------------
 # Error 404 page
 --------------------------------------------------------------*/
-#error404 {
-  background: var(--linear);
+/* #error404 {
+  background: var(--font-main);
+} */
+#error404 p {
+  color: #838da0;
+}
+#error404 p a {
   color: var(--font-main);
+  background-color: var(--fulvous);
 }
 /*--------------------------------------------------------------
 # Media Query

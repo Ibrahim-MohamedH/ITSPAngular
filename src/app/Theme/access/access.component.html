@@ -68,7 +68,7 @@
               aria-labelledby="nav-home-tab"
               tabindex="0"
             >
-              <form method="post" action="">
+              <form #formGroup="ngForm">
                 <div class="mb-3">
                   <label for="loginEmail" class="fw-bold form-label"
                     >Email</label
@@ -78,7 +78,10 @@
                     name="email"
                     class="form-control"
                     id="loginEmail"
+                    #email="ngModel"
+                    [(ngModel)]="login.email"
                     placeholder="example@gmail.com"
+                    required
                   />
                 </div>
                 <div class="mb-3">
@@ -89,8 +92,11 @@
                     type="password"
                     name="password"
                     class="form-control"
+                    #password="ngModel"
+                    [(ngModel)]="login.password"
                     id="loginPassword"
                     placeholder="***********************"
+                    required
                   />
                 </div>
                 <div class="mb-3 form-check">
@@ -104,9 +110,9 @@
                   >
                 </div>
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary col-12 mb-3">
-                    Submit
-                  </button>
+                  <div
+                    *ngIf="formGroup?.valid; then validLogin; else invalidLogin"
+                  ></div>
                   <a href="#" class="btn">Forgot Password?</a>
                 </div>
               </form>
@@ -118,7 +124,7 @@
               aria-labelledby="nav-register-tab"
               tabindex="0"
             >
-              <form method="post" action="" enctype="multipart/form-data">
+              <form [formGroup]="register" enctype="multipart/form-data">
                 <div class="mb-3">
                   <label for="registerName" class="form-label fw-bold"
                     >Full-Name</label
@@ -128,8 +134,13 @@
                     name="fullName"
                     class="form-control"
                     id="registerName"
+                    formControlName="name"
                     placeholder="Zeyad Abdelazim Ali"
-                  />
+                  /><span
+                    class="text-danger"
+                    *ngIf="name?.touched && name?.invalid"
+                    >*This field is required</span
+                  >
                 </div>
                 <div class="mb-3">
                   <label for="registerEmail" class="form-label fw-bold"
@@ -140,8 +151,16 @@
                     class="form-control"
                     id="registerEmail"
                     name="email"
+                    formControlName="email"
                     placeholder="example@gmail.com"
-                  />
+                  /><span
+                    class="text-danger"
+                    *ngIf="
+                      register.controls.email?.touched &&
+                      register.controls.email?.invalid
+                    "
+                    >*This field is required</span
+                  >
                 </div>
                 <div class="mb-3">
                   <label for="registerPassword" class="form-label fw-bold"
@@ -152,8 +171,16 @@
                     class="form-control"
                     id="registerPassword"
                     name="password"
+                    formControlName="password"
                     placeholder="****************"
-                  />
+                  /><span
+                    class="text-danger"
+                    *ngIf="
+                      register.controls.password?.touched &&
+                      register.controls.password?.invalid
+                    "
+                    >*This field is required</span
+                  >
                 </div>
                 <div class="mb-3">
                   <label for="registerConfPassword" class="form-label fw-bold"
@@ -163,9 +190,14 @@
                     type="password"
                     class="form-control"
                     id="registerConfPassword"
+                    formControlName="confirmPassword"
                     name="confirmation_password"
                     placeholder="****************"
-                  />
+                  /><span
+                    class="text-danger"
+                    *ngIf="confirmPassword?.touched && confirmPassword?.invalid"
+                    >*This field is required</span
+                  >
                 </div>
                 <div class="mb-3">
                   <label for="registerPhone" class="form-label fw-bold"
@@ -176,8 +208,13 @@
                     name="phone"
                     class="form-control"
                     id="registerPhone"
+                    formControlName="phone"
                     placeholder="+201090000000"
-                  />
+                  /><span
+                    class="text-danger"
+                    *ngIf="phone?.touched && phone?.invalid"
+                    >*This field is required</span
+                  >
                 </div>
                 <div class="mb-3">
                   <label for="registerCity" class="form-label fw-bold"
@@ -189,37 +226,46 @@
                     class="form-control"
                     id="registerCity"
                     placeholder="Giza"
-                  />
+                    formControlName="city"
+                  /><span
+                    class="text-danger"
+                    *ngIf="city?.touched && city?.invalid"
+                    >*This field is required</span
+                  >
                 </div>
                 <div class="mb-3">
-                  <label for="registerCity" class="form-label fw-bold"
+                  <label for="registerArea" class="form-label fw-bold"
                     >Area</label
                   >
                   <input
                     type="text"
-                    name="city"
+                    name="area"
                     class="form-control"
-                    id="registerCity"
+                    id="registerArea"
                     placeholder="Haram"
-                  />
+                    formControlName="area"
+                  /><span
+                    class="text-danger"
+                    *ngIf="area?.touched && area?.invalid"
+                    >*This field is required</span
+                  >
                 </div>
                 <div class="mb-3">
-                  <label for="registerCity" class="form-label fw-bold"
+                  <label for="registerYear" class="form-label fw-bold"
                     >Birth Date</label
                   >
                   <div class="container-fluid">
                     <div class="row">
                       <div class="col-lg-4 mb-lg-0 mb-3 pe-lg-1 px-0">
-                        <select name="birthYear" id="year" class="form-select">
-                          <option value="1990">1990</option>
-                          <option value="1991">1991</option>
-                          <option value="1992">1992</option>
-                          <option value="1993">1993</option>
-                          <option value="1994">1994</option>
-                          <option value="1995">1995</option>
-                          <option value="1996">1996</option>
-                          <option value="1997">1997</option>
-                          <option value="1998">1998</option>
+                        <select
+                          name="birthYear"
+                          id="registerYear"
+                          class="form-select"
+                          formControlName="birthYear"
+                        >
+                          <option *ngFor="let year of years" value="{{ year }}">
+                            {{ year }}
+                          </option>
                         </select>
                       </div>
                       <div class="col-lg-4 mb-lg-0 mb-3 px-lg-1 px-0">
@@ -227,56 +273,96 @@
                           name="birthMonth"
                           id="month"
                           class="form-select"
+                          formControlName="birthMonth"
                         >
-                          <option value="jan">january</option>
-                          <option value="feb">february</option>
+                          <option value="january">January</option>
+                          <option value="february">February</option>
                           <option value="march">March</option>
                           <option value="april">April</option>
-                          <option value="may">may</option>
+                          <option value="may">May</option>
                           <option value="june">June</option>
                           <option value="july">July</option>
                           <option value="august">August</option>
                           <option value="september">September</option>
+                          <option value="october">October</option>
+                          <option value="november">November</option>
+                          <option value="december">December</option>
                         </select>
                       </div>
                       <div class="col-lg-4 ps-lg-1 px-0">
-                        <select name="birthDay" id="day" class="form-select">
-                          <option value="01">01</option>
-                          <option value="02">02</option>
-                          <option value="03">03</option>
-                          <option value="04">04</option>
-                          <option value="05">05</option>
-                          <option value="06">06</option>
-                          <option value="07">07</option>
-                          <option value="08">08</option>
-                          <option value="09">09</option>
+                        <select
+                          formControlName="birthDay"
+                          name="birthDay"
+                          id="day"
+                          class="form-select"
+                        >
+                          <option *ngFor="let day of days" value="{{ day }}">
+                            {{ day }}
+                          </option>
                         </select>
                       </div>
                     </div>
+                    <span
+                      class="text-danger"
+                      *ngIf="birthYear?.touched && birthYear?.invalid"
+                      >*Year of birth is required<br
+                    /></span>
+                    <span
+                      class="text-danger"
+                      *ngIf="birthMonth?.touched && birthMonth?.invalid"
+                      >*Birth month is required<br
+                    /></span>
+                    <span
+                      class="text-danger"
+                      *ngIf="birthDay?.touched && birthDay?.invalid"
+                      >*Birthday is required</span
+                    >
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="registerGender" class="form-label fw-bold"
                     >Gender</label
                   >
-                  <select name="gender" id="registerGender" class="form-select">
+                  <select
+                    name="gender"
+                    id="registerGender"
+                    class="form-select"
+                    formControlName="gender"
+                  >
                     <option value="male">male</option>
                     <option value="female">female</option>
                   </select>
+                  <span
+                    class="text-danger"
+                    *ngIf="gender?.touched && gender?.invalid"
+                    >*Gender is required</span
+                  >
                 </div>
                 <div class="mb-3 form-check">
                   <input
                     type="checkbox"
+                    formControlName="accept"
                     class="form-check-input"
                     id="registerCheck"
                   />
                   <label class="form-check-label" for="registerCheck"
                     >I agree to the terms and conditions of the website.</label
                   >
+                  <span
+                    class="text-danger"
+                    *ngIf="accept?.touched && !accept?.value"
+                  >
+                    <br />*You must read and accept our terms and
+                    conditions</span
+                  >
                 </div>
-                <button type="submit" class="btn btn-primary col-12">
-                  Register
-                </button>
+                <div
+                  *ngIf="
+                    register?.valid;
+                    then validRegister;
+                    else invalidRegister
+                  "
+                ></div>
               </form>
             </div>
           </div>
@@ -285,3 +371,23 @@
     </div>
   </div>
 </section>
+<ng-template #validLogin>
+  <button type="submit" (click)="Login()" class="btn btn-primary col-12 mb-3">
+    Submit
+  </button>
+</ng-template>
+<ng-template #invalidLogin>
+  <button type="submit" disabled class="btn btn-primary col-12 mb-3">
+    Submit
+  </button>
+</ng-template>
+<ng-template #validRegister>
+  <button type="submit" (click)="Register()" class="btn btn-primary col-12">
+    Register
+  </button>
+</ng-template>
+<ng-template #invalidRegister>
+  <button type="submit" disabled class="btn btn-primary col-12">
+    Register
+  </button>
+</ng-template>

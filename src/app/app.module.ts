@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // ================== Componenets ==================
@@ -27,7 +26,8 @@ import { AccessComponent } from './Theme/access/access.component';
 import { Error404Component } from './Theme/error404/error404.component';
 // ================== Modules ========================
 // ==== Forms
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 // ==== Swipper
 import { SwiperModule } from 'swiper/angular';
 import { SoftwareHouseComponent } from './Theme/solutions/software-house/software-house.component';
@@ -35,6 +35,16 @@ import { DigitalMarketingComponent } from './Theme/solutions/digital-marketing/d
 import { MarketingBusinessComponent } from './Theme/solutions/marketing-business/marketing-business.component';
 import { ResourcesComponent } from './Theme/main/resources/resources.component';
 import { ProjectComponent } from './Theme/main/project/project.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+// ================== Providers ========================
+// interceptor
+import { TokenInterceptor } from './controllers/interceptor/token.interceptor';
+import { RegisterComponent } from './Theme/access/register/register.component';
+import { LoginComponent } from './Theme/access/login/login.component';
+import { OTPComponent } from './Theme/access/otp/otp.component';
+import { RecoverEmailComponent } from './Theme/access/recover-email/recover-email.component';
+import { ChangePasswordComponent } from './Theme/access/change-password/change-password.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,9 +68,27 @@ import { ProjectComponent } from './Theme/main/project/project.component';
     MarketingBusinessComponent,
     ResourcesComponent,
     ProjectComponent,
+    RegisterComponent,
+    LoginComponent,
+    OTPComponent,
+    RecoverEmailComponent,
+    ChangePasswordComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, SwiperModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    SwiperModule,
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

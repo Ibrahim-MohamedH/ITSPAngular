@@ -18,32 +18,109 @@ import { DigitalMarketingComponent } from './Theme/solutions/digital-marketing/d
 import { MarketingBusinessComponent } from './Theme/solutions/marketing-business/marketing-business.component';
 import { ResourcesComponent } from './Theme/main/resources/resources.component';
 import { ProjectComponent } from './Theme/main/project/project.component';
+import { RegisterComponent } from './Theme/access/register/register.component';
+import { LoginComponent } from './Theme/access/login/login.component';
+import { OTPComponent } from './Theme/access/otp/otp.component';
+import { RecoverEmailComponent } from './Theme/access/recover-email/recover-email.component';
+import { ChangePasswordComponent } from './Theme/access/change-password/change-password.component';
 
 const routes: Routes = [
   // Main Routes
-  { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'home/:sectionId', component: HomeComponent },
-  { path: 'aboutUs', component: AboutUsComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'portfolio', component: PortfolioComponent },
-  { path: 'reels', component: ReelsComponent },
-  { path: 'resources', component: ResourcesComponent },
-  { path: 'project/:id', component: ProjectComponent },
+  { path: '', title: 'ITSP | Home', component: HomeComponent },
+  { path: 'home', title: 'ITSP | Home', component: HomeComponent },
+  { path: 'home/:sectionId', title: 'ITSP | Home', component: HomeComponent },
+  { path: 'aboutUs', title: 'ITSP | About us', component: AboutUsComponent },
+  {
+    path: 'aboutUs/:sectionId',
+    title: 'ITSP | About us',
+    component: AboutUsComponent,
+  },
+  { path: 'contact', title: 'ITSP | Contact us', component: ContactComponent },
+  // {
+  //   path: 'portfolio',
+  //   title: 'ITSP | Portfolio',
+  //   component: PortfolioComponent,
+  // },
+  // { path: 'reels', title: 'ITSP | Reels', component: ReelsComponent },
+  // {
+  //   path: 'reels/:sectionId',
+  //   title: 'ITSP | Reels',
+  //   component: ReelsComponent,
+  // },
+  // {
+  //   path: 'resources',
+  //   title: 'ITSP | Resources',
+  //   component: ResourcesComponent,
+  // },
+  // {
+  //   path: 'resources/:sectionId',
+  //   title: 'ITSP | Resources',
+  //   component: ResourcesComponent,
+  // },
+  // { path: 'project/:id', title: 'ITSP | Project', component: ProjectComponent },
   // Jobs Routes
-  { path: 'job_categories', component: JobCategoriesComponent },
-  { path: 'jobs/:category', component: JobAvailableComponent },
-  { path: 'jobs/:category/:id', component: JobDetailsComponent },
+  {
+    path: 'job_categories',
+    title: 'ITSP | Career',
+    component: JobCategoriesComponent,
+  },
+  {
+    path: 'jobs/:category',
+    title: 'ITSP | Career',
+    component: JobAvailableComponent,
+  },
+  {
+    path: 'jobs/:category/:id',
+    title: 'ITSP | Career',
+    component: JobDetailsComponent,
+  },
   // Access Routes
   { path: 'access', component: AccessComponent },
+  { path: 'register', title: 'Register', component: RegisterComponent },
+  { path: 'login', title: 'Login', component: LoginComponent },
+  {
+    path: 'otp',
+    title: 'One Time Password',
+    component: OTPComponent,
+  },
+  {
+    path: 'change_password',
+    title: 'Change Password',
+    component: ChangePasswordComponent,
+  },
+  {
+    path: 'recover_email',
+    title: 'Recover Email',
+    component: RecoverEmailComponent,
+  },
   // User Routes
-  { path: 'profile', component: ProfileComponent },
-  { path: 'edit_profile', component: EditProfileComponent },
-  { path: 'track_jobs', component: TrackApplicationComponent },
+  { path: 'profile', title: 'ITSP | Profile', component: ProfileComponent },
+  {
+    path: 'edit_profile',
+    title: 'ITSP | Profile',
+    component: EditProfileComponent,
+  },
+  {
+    path: 'track_applications',
+    title: 'ITSP | Applications',
+    component: TrackApplicationComponent,
+  },
   // Houses
-  { path: 'softwareHouse', component: SoftwareHouseComponent },
-  { path: 'digitalMarketing', component: DigitalMarketingComponent },
-  { path: 'marketingBusiness', component: MarketingBusinessComponent },
+  {
+    path: 'software_house',
+    title: 'ITSP | Software House',
+    component: SoftwareHouseComponent,
+  },
+  {
+    path: 'digital_marketing',
+    title: 'ITSP | Digital Marketing',
+    component: DigitalMarketingComponent,
+  },
+  {
+    path: 'marketing_&_business_house',
+    title: 'ITSP | Marketing and Business House',
+    component: MarketingBusinessComponent,
+  },
 
   // Page not Found
   { path: '**', component: Error404Component },

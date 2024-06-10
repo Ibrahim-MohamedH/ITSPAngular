@@ -7,8 +7,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent {
-  constructor(private route: ActivatedRoute, private router: Router) {}
-  sectionNav(sectionId: string) {
-    this.router.navigate(['home', sectionId]);
+  constructor(private router: Router) {}
+  sectionNav(route: string, sectionId: string) {
+    this.router.navigate([route, sectionId]);
   }
 }

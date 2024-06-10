@@ -16,7 +16,7 @@ export class ProjectComponent {
       disableOnInteraction: false,
     },
     loop: true,
-    spaceBetween: 10,
+    spaceBetween: 30,
     // Responsive breakpoints
     breakpoints: {
       320: {
@@ -32,7 +32,7 @@ export class ProjectComponent {
       992: {
         slidesPerView: 4,
       },
-      1140: {
+      1400: {
         slidesPerView: 5,
       },
     },

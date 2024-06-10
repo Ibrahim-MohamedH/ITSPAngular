@@ -1,3 +1,4 @@
+import { AboutUsComponent } from './../../main/about-us/about-us.component';
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -8,7 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class NavbarComponent {
   constructor(private route: ActivatedRoute, private router: Router) {}
-  sectionNav(sectionId: string) {
-    this.router.navigate(['home', sectionId]);
+  sectionNav(route: string, sectionId: string) {
+    this.router.navigate([route, sectionId]);
   }
 }
