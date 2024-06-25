@@ -84,39 +84,32 @@ nav .nav-item button.btn i {
 #solutions .allsolutions a {
   color: var(--font-main);
 }
+#solutions #digitalMarketing,
 #solutions #software,
 #solutions #marketing {
   color: var(--black);
 }
-
+#solutions #digitalMarketing,
 #solutions #software,
 #solutions #marketing {
   background-color: var(--font-main);
 }
-
+#solutions #digitalMarketing:hover,
 #solutions #software:hover,
 #solutions #marketing:hover {
   background: var(--fulvous);
 }
+#solutions #digitalMarketing:hover,
 #solutions #software:hover,
 #solutions #marketing:hover {
   color: var(--font-main);
 }
-#solutions #digitalMarketing {
-  background: var(--fulvous);
-}
-#solutions #digitalMarketing:hover {
-  background-color: var(--font-main);
-}
-#solutions #digitalMarketing:hover,
-#solutions #digitalMarketing:hover {
-  color: var(--black);
-}
+
 /*--------------------------------------------------------------
 # Reels
 --------------------------------------------------------------*/
-#reels .reels-text {
-  color: white;
+#reels .reels-text h2 span {
+  color: var(--fulvous);
 }
 #reels .reels-text a {
   color: var(--font-main);
@@ -159,8 +152,8 @@ nav .nav-item button.btn i {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-#team h3 {
-  color: var(--main);
+#team h2 span {
+  color: var(--fulvous);
 }
 #team .container > p {
   color: var(--main);
@@ -169,7 +162,7 @@ nav .nav-item button.btn i {
 # ready
 --------------------------------------------------------------*/
 #ready {
-  background-color: var(--black);
+  background-color: var(--grey);
   color: white;
 }
 /*--------------------------------------------------------------
@@ -179,11 +172,7 @@ nav .nav-item button.btn i {
 #projects .card {
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
 }
-#projects h3,
-#projects p,
-#projects h5 {
-  color: var(--main);
-}
+
 #projects a.btn {
   background-color: var(--fulvous);
   color: var(--font-dark);
@@ -191,9 +180,7 @@ nav .nav-item button.btn i {
 /*--------------------------------------------------------------
 # Reels Page
 --------------------------------------------------------------*/
-#allReels h2 {
-  color: var(--main);
-}
+
 #allReels .card {
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
   border: none;
@@ -491,34 +478,10 @@ nav .nav-item button.btn i {
 /*--------------------------------------------------------------
 # Error 404 page
 --------------------------------------------------------------*/
-/* #error404 {
-  background: var(--font-main);
-} */
 #error404 p {
   color: #838da0;
 }
 #error404 p a {
   color: var(--font-main);
   background-color: var(--fulvous);
-}
-/*--------------------------------------------------------------
-# Media Query
---------------------------------------------------------------*/
-@media (max-width: 768px) {
-  #solutions #media {
-    background-color: var(--font-main);
-    background: var(--linear);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  #solutions #software:hover,
-  #solutions #marketing:hover,
-  #solutions #media:hover {
-    color: var(--font-main);
-    background: var(--linear);
-    background-clip: unset;
-    -webkit-background-clip: unset;
-    -webkit-text-fill-color: unset;
-  }
 }

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Theme/main/home/home.component';
-import { AccessComponent } from './Theme/access/access.component';
 import { AboutUsComponent } from './Theme/main/about-us/about-us.component';
 import { ContactComponent } from './Theme/main/contact/contact.component';
 import { PortfolioComponent } from './Theme/main/portfolio/portfolio.component';
@@ -23,6 +22,7 @@ import { LoginComponent } from './Theme/access/login/login.component';
 import { OTPComponent } from './Theme/access/otp/otp.component';
 import { RecoverEmailComponent } from './Theme/access/recover-email/recover-email.component';
 import { ChangePasswordComponent } from './Theme/access/change-password/change-password.component';
+import { LocCampComponent } from './Theme/loc-camp/loc-camp.component';
 
 const routes: Routes = [
   // Main Routes
@@ -75,7 +75,6 @@ const routes: Routes = [
     component: JobDetailsComponent,
   },
   // Access Routes
-  { path: 'access', component: AccessComponent },
   { path: 'register', title: 'Register', component: RegisterComponent },
   { path: 'login', title: 'Login', component: LoginComponent },
   {
@@ -89,8 +88,8 @@ const routes: Routes = [
     component: ChangePasswordComponent,
   },
   {
-    path: 'recover_email',
-    title: 'Recover Email',
+    path: 'recover_password',
+    title: 'Recover Password',
     component: RecoverEmailComponent,
   },
   // User Routes
@@ -120,6 +119,16 @@ const routes: Routes = [
     path: 'marketing_&_business_house',
     title: 'ITSP | Marketing and Business House',
     component: MarketingBusinessComponent,
+  },
+  {
+    path: 'loc-camp',
+    title: 'Loc Camp - Welcome to future of translation',
+    component: LocCampComponent,
+  },
+  {
+    path: 'loc-camp/:sectionId',
+    title: 'Loc Camp - Welcome to future of translation',
+    component: LocCampComponent,
   },
 
   // Page not Found

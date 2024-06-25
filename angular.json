@@ -24,15 +24,16 @@
               "node_modules/aos/dist/aos.css",
               "node_modules/animate.css/animate.min.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/particles.js/particles.js"],
+            "allowedCommonJsDependencies": ["aos"]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "650kb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",

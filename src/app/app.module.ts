@@ -21,7 +21,11 @@ import { ProfileComponent } from './Theme/user/profile/profile.component';
 import { EditProfileComponent } from './Theme/user/edit-profile/edit-profile.component';
 import { TrackApplicationComponent } from './Theme/user/track-application/track-application.component';
 // ==== Access (Login & Register)
-import { AccessComponent } from './Theme/access/access.component';
+import { RegisterComponent } from './Theme/access/register/register.component';
+import { LoginComponent } from './Theme/access/login/login.component';
+import { OTPComponent } from './Theme/access/otp/otp.component';
+import { RecoverEmailComponent } from './Theme/access/recover-email/recover-email.component';
+import { ChangePasswordComponent } from './Theme/access/change-password/change-password.component';
 // ==== 404 Page
 import { Error404Component } from './Theme/error404/error404.component';
 // ================== Modules ========================
@@ -39,11 +43,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 // ================== Providers ========================
 // interceptor
 import { TokenInterceptor } from './controllers/interceptor/token.interceptor';
-import { RegisterComponent } from './Theme/access/register/register.component';
-import { LoginComponent } from './Theme/access/login/login.component';
-import { OTPComponent } from './Theme/access/otp/otp.component';
-import { RecoverEmailComponent } from './Theme/access/recover-email/recover-email.component';
-import { ChangePasswordComponent } from './Theme/access/change-password/change-password.component';
+
+import { LocCampComponent } from './Theme/loc-camp/loc-camp.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,6 @@ import { ChangePasswordComponent } from './Theme/access/change-password/change-p
     ProfileComponent,
     EditProfileComponent,
     TrackApplicationComponent,
-    AccessComponent,
     Error404Component,
     SoftwareHouseComponent,
     DigitalMarketingComponent,
@@ -73,6 +73,7 @@ import { ChangePasswordComponent } from './Theme/access/change-password/change-p
     OTPComponent,
     RecoverEmailComponent,
     ChangePasswordComponent,
+    LocCampComponent,
   ],
   imports: [
     BrowserModule,

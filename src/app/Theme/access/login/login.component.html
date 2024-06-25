@@ -1,10 +1,15 @@
 <section id="login">
   <div class="container-xxl px-0">
     <div class="row mx-0">
-      <div class="col-lg-7 py-5">
+      <div class="col-lg-7 loginForm py-5">
         <div class="row mx-0 align-items-center">
           <div class="col-6">
-            <img src="./assets/images/ITSP_logo.png" alt="" class="img-fluid" />
+            <a routerLink="/"
+              ><img
+                src="./assets/images/ITSP_logo.png"
+                alt=""
+                class="img-fluid"
+            /></a>
           </div>
           <div class="col-6 text-end">
             <p class="mb-0">
@@ -43,7 +48,7 @@
               />Facebook</a
             >
           </div>
-          <div class="col-md-6 col-sm-8 col-12 mx-auto">
+          <div class="col-lg-7 col-sm-8 col-12 mx-auto">
             <div class="row mx-0">
               <div class="col-sm-4 col-4"><hr /></div>
               <div class="col-sm-4 col-4 px-0">
@@ -73,6 +78,31 @@
                   name="password"
                 />
               </div>
+              <div class="form-group mb-3">
+                <div class="row mx-0">
+                  <div class="col-6 form-switch">
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      role="switch"
+                      id="flexSwitchCheckDefault"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="flexSwitchCheckDefault"
+                    >
+                      Remember me</label
+                    >
+                  </div>
+                  <div class="col-6 text-end">
+                    <a
+                      routerLink="/recover_password"
+                      class="text-decoration-none forget"
+                      >Forget Password?</a
+                    >
+                  </div>
+                </div>
+              </div>
               <div class="form-group text-center mb-3">
                 <button class="btn py-2 col-12">login</button>
               </div>
@@ -86,3 +116,4 @@
     </div>
   </div>
 </section>
+<app-footer></app-footer>

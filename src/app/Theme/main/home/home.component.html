@@ -1,8 +1,13 @@
+<app-navbar></app-navbar>
 <!-- Hero Start -->
-<section id="hero" class="py-5" data-aos="fade-down" data-aos-duration="2000">
-  <div class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-12 mb-5 text-center">
+<section id="hero" data-aos="fade-down" data-aos-duration="2000">
+  <video autoplay muted loop plays-inline>
+    <source src="../../../../assets/videos/bg_video.mp4" type="video/mp4" />
+  </video>
+  <!-- <section id="particle-js"></section> -->
+  <div class="container pt-5">
+    <div class="row flex-column justify-content-center pt-5">
+      <div class="col-12 mb-auto text-center pt-5">
         <h1 class="fw-bold mb-4">Endless Possibilities … Endless Impact!</h1>
         <p class="col-lg-7 col-md-8 col-12 mx-auto mb-3">
           <span class="fw-bold">ITSP</span> is dedicated to helping businesses
@@ -14,7 +19,18 @@
         <a routerLink="/contact" class="btn py-2 px-5">Get in touch</a>
       </div>
       <div class="col-12">
-        <!-- ============================================= -->
+        <a
+          (click)="sectionNav('home', 'portfolio')"
+          class="text-decoration-none"
+        >
+          <img
+            src="../../../../assets/images/mouse-scroll.png"
+            alt="Scroll Down"
+            class="me-2 img-fluid"
+          />
+        </a>
+      </div>
+      <!-- <div class="col-12">
         <swiper [config]="hero">
           <ng-template swiperSlide
             ><img
@@ -53,9 +69,7 @@
               alt=""
           /></ng-template>
         </swiper>
-        <!-- ============================================= -->
-        <!-- ============================================= -->
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
@@ -145,14 +159,17 @@
 <!-- <section id="portfolio" class="py-5">
   <div class="container-fluid py-4">
     <div class="text-center mb-5">
-      <h2 class="fw-bold mb-4">Portfolio</h2>
-      <p class="col-lg-7 col-md-8 col-12 mx-auto px-1 fs-5 mb-4 lh-1">
-        Lorem ipsum dolor sit amet consectetur. Nulla felis consectetur aliquet
-        neque condimentum non. Sed sagittis libero condimentum bibendum
-        venenatis. Nulla feugiat ut proin facilisis in at et sit. In est semper
-        aliquet porta ultricies. Elementum blandit sed risus amet non.
+      <h2 class="mb-4 col-xl-6 col-lg-7 col-md-8 col-12 mx-auto">
+        our masterpieces: a showcase of software & marketing Excellence!
+      </h2>
+      <p class="col-xl-6 col-lg-7 col-md-8 col-12 mx-auto px-1 fs-5 mb-4 lh-1">
+        From brainstorming sessions to breathtaking results, witness the journey
+        behind “Our Portfolio”, and explore a treasure trove of “Digital
+        Solutions”, that will amaze and inspire.
       </p>
-      <a routerLink="portfolio" class="btn px-5 py-2">More Projects</a>
+      <a routerLink="portfolio" class="btn px-5 py-2"
+        ><span class="px-lg-3">More Projects</span></a
+      >
     </div>
     <swiper [config]="portfolio">
       <ng-template swiperSlide
@@ -299,19 +316,34 @@
     </swiper>
   </div>
 </section> -->
+<!-- Career Start -->
+<section id="career" class="py-5">
+  <div class="container-xl py-5">
+    <div class="text-center py-5">
+      <h2 class="fs-1">careers</h2>
+      <p class="fs-5 mb-4">
+        Push boundaries, unlock potential. Career growth starts here!
+      </p>
+      <a routerLink="/job_categories" class="btn px-5 py-2"
+        ><span class="px-5"> Careers </span></a
+      >
+    </div>
+  </div>
+</section>
 <!-- Reels Start -->
 <!-- <section id="reels" class="py-5">
-  <div class="text-center mb-3 reels-text">
-    <h2 class="fw-bold my-5 fs-1">Reels</h2>
+  <div class="text-center mb-5 reels-text">
+    <h2 class="my-5 fs-1">
+      stop scrolling, start learning: <span>Reels</span> That spark your digital
+      curiosity!
+    </h2>
     <p class="col-lg-7 col-md-8 col-12 mx-auto px-1 fs-5 mb-4 lh-1">
-      Lorem ipsum dolor sit amet consectetur. Nulla felis consectetur aliquet
-      neque condimentum non. Sed sagittis libero condimentum bibendum venenatis.
-      Nulla feugiat ut proin facilisis in at et sit. In est semper aliquet porta
-      ultricies. Elementum blandit sed risus amet non.
+      Dive into engaging content for the digital age, get quick tips,
+      behind-the-scenes insights, and industry trends - All in 60 Seconds!
     </p>
     <a routerLink="/reels" class="btn px-5 py-2 rounded"> More Reels</a>
   </div>
-  <div class="container-xl px-md-4 px-3 pb-3">
+  <div class="container-xxl px-md-4 px-3 pb-3">
     <div class="row align-items-center">
       <div class="col-lg-6 mainReel px-2 mb-3">
         <div class="card p-md-3 p-2">
@@ -344,103 +376,101 @@
         </div>
       </div>
       <div class="col-lg-6 px-0 subReel mini-cards mb-3">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-sm-6 my-2">
-              <div class="card p-2">
-                <img
-                  src="./assets/images/reel1.jpg"
-                  data-reelUrl="https://www.youtube.com/embed/GMFb27PdB3I?si=CP7W5jdN6FDAcI0H"
-                  alt=""
-                  class="card-img-top"
-                />
-                <div class="reelCover">
-                  <i class="fa-solid fa-play"></i>
-                </div>
-                <div class="card-body p-0 pt-2">
-                  <div class="container">
-                    <h5 class="px-0 fw-semibold">What's Digital Marketing?</h5>
+        <div class="row mx-0 justify-content-center">
+          <div class="col-sm-6 mb-2">
+            <div class="card p-2">
+              <img
+                src="./assets/images/reel1.jpg"
+                data-reelUrl="https://www.youtube.com/embed/GMFb27PdB3I?si=CP7W5jdN6FDAcI0H"
+                alt=""
+                class="card-img-top"
+              />
+              <div class="reelCover">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="card-body p-0 pt-2">
+                <div class="container">
+                  <h5 class="px-0 fw-semibold">What's Digital Marketing?</h5>
 
-                    <p class="px-0 mb-0">
-                      1 Lorem ipsum dolor sit amet consectetur. Nulla felis
-                      consectetur aliquet neque condimentum non. Sed sagittis
-                      libero
-                    </p>
-                    <a href="" class="btn px-0">Tech Category</a>
-                  </div>
+                  <p class="px-0 mb-0">
+                    1 Lorem ipsum dolor sit amet consectetur. Nulla felis
+                    consectetur aliquet neque condimentum non. Sed sagittis
+                    libero
+                  </p>
+                  <a href="" class="btn px-0">Tech Category</a>
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 my-2">
-              <div class="card p-2">
-                <img
-                  src="./assets/images/reel2.jpg"
-                  data-reelUrl="https://www.youtube.com/embed/FPhg_ZjrPtU?si=4iznqmqWmzhYlyNY"
-                  alt=""
-                  class="card-img-top"
-                />
-                <div class="reelCover">
-                  <i class="fa-solid fa-play"></i>
-                </div>
-                <div class="card-body p-0 pt-2">
-                  <div class="container">
-                    <h5 class="px-0 fw-semibold">What a Story</h5>
-                    <p class="px-0 mb-0">
-                      2 Lorem ipsum dolor sit amet consectetur. Nulla felis
-                      consectetur aliquet neque condimentum non. Sed sagittis
-                      libero
-                    </p>
-                    <a href="" class="btn px-0">Tech Category</a>
-                  </div>
+          </div>
+          <div class="col-sm-6 mb-2">
+            <div class="card p-2">
+              <img
+                src="./assets/images/reel2.jpg"
+                data-reelUrl="https://www.youtube.com/embed/FPhg_ZjrPtU?si=4iznqmqWmzhYlyNY"
+                alt=""
+                class="card-img-top"
+              />
+              <div class="reelCover">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="card-body p-0 pt-2">
+                <div class="container">
+                  <h5 class="px-0 fw-semibold">What a Story</h5>
+                  <p class="px-0 mb-0">
+                    2 Lorem ipsum dolor sit amet consectetur. Nulla felis
+                    consectetur aliquet neque condimentum non. Sed sagittis
+                    libero
+                  </p>
+                  <a href="" class="btn px-0">Tech Category</a>
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 my-2">
-              <div class="card p-2">
-                <img
-                  src="./assets/images/reel3.jpg"
-                  data-reelUrl="https://www.youtube.com/embed/UBUNrFtufWo?si=T8tvjiCu47uFVRij"
-                  alt=""
-                  class="card-img-top"
-                />
-                <div class="reelCover">
-                  <i class="fa-solid fa-play"></i>
-                </div>
-                <div class="card-body p-0 pt-2">
-                  <div class="container">
-                    <h5 class="px-0 fw-semibold">Session vs Token</h5>
-                    <p class="px-0 mb-0">
-                      3 Lorem ipsum dolor sit amet consectetur. Nulla felis
-                      consectetur aliquet neque condimentum non. Sed sagittis
-                      libero
-                    </p>
-                    <a href="" class="btn px-0">Tech Category</a>
-                  </div>
+          </div>
+          <div class="col-sm-6 mb-2">
+            <div class="card p-2">
+              <img
+                src="./assets/images/reel3.jpg"
+                data-reelUrl="https://www.youtube.com/embed/UBUNrFtufWo?si=T8tvjiCu47uFVRij"
+                alt=""
+                class="card-img-top"
+              />
+              <div class="reelCover">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="card-body p-0 pt-2">
+                <div class="container">
+                  <h5 class="px-0 fw-semibold">Session vs Token</h5>
+                  <p class="px-0 mb-0">
+                    3 Lorem ipsum dolor sit amet consectetur. Nulla felis
+                    consectetur aliquet neque condimentum non. Sed sagittis
+                    libero
+                  </p>
+                  <a href="" class="btn px-0">Tech Category</a>
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 my-2">
-              <div class="card p-2">
-                <img
-                  src="./assets/images/reel4.jpg"
-                  data-reelUrl="https://www.youtube.com/embed/DK8M-ZFjaMw?si=Lk_8VhLKnNAOH0Co"
-                  alt=""
-                  class="card-img-top"
-                />
-                <div class="reelCover">
-                  <i class="fa-solid fa-play"></i>
-                </div>
-                <div class="card-body p-0 pt-2">
-                  <div class="container">
-                    <h5 class="px-0 fw-semibold">What’s new in Angular v18</h5>
+          </div>
+          <div class="col-sm-6 mb-2">
+            <div class="card p-2">
+              <img
+                src="./assets/images/reel4.jpg"
+                data-reelUrl="https://www.youtube.com/embed/DK8M-ZFjaMw?si=Lk_8VhLKnNAOH0Co"
+                alt=""
+                class="card-img-top"
+              />
+              <div class="reelCover">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="card-body p-0 pt-2">
+                <div class="container">
+                  <h5 class="px-0 fw-semibold">What’s new in Angular v18</h5>
 
-                    <p class="px-0 mb-0">
-                      4 Lorem ipsum dolor sit amet consectetur. Nulla felis
-                      consectetur aliquet neque condimentum non. Sed sagittis
-                      libero
-                    </p>
-                    <a href="" class="btn px-0">Tech Category</a>
-                  </div>
+                  <p class="px-0 mb-0">
+                    4 Lorem ipsum dolor sit amet consectetur. Nulla felis
+                    consectetur aliquet neque condimentum non. Sed sagittis
+                    libero
+                  </p>
+                  <a href="" class="btn px-0">Tech Category</a>
                 </div>
               </div>
             </div>
@@ -450,13 +480,36 @@
     </div>
   </div>
 </section> -->
+<!-- world map  -->
+<section id="world" class="py-5" data-aos="fade-up" data-aos-duration="2000">
+  <video autoplay muted loop plays-inline>
+    <source src="../../../../assets/videos/globe-spin.mp4" type="video/mp4" />
+  </video>
+  <div class="container-xl py-5">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <h2 class="fw-bold mb-3">We code & connect you with the world.</h2>
+        <p>
+          Beyond Borders, Beyond Limits: Connecting the World Through Software &
+          Digital Marketing!The world is our canvas, and languages are our
+          colors. We're not just a software and digitalmarketing company; we're
+          global architects, building bridges across cultures and continents.
+        </p>
+      </div>
+      <!-- <div class="col-12 text-center">
+        <img class="img-fluid" src="./assets/images/worldmap.png" alt="" />
+      </div> -->
+    </div>
+  </div>
+</section>
 <!-- Team Start -->
 <!-- <section id="team" class="py-5">
-  <div class="container">
-    <h3 class="text-center fw-bold">Expert Team</h3>
-    <p class="text-center px-md-5 px-1 my-5">
-      Composed of professionals with high skills and extensive experience, our
-      team is driven todeliver outstanding outcomes.
+  <div class="container-xxl">
+    <h2 class="fs-1 text-center fw-bold">
+      our <span>team</span> of innovators
+    </h2>
+    <p class="text-center px-md-5 px-1 mb-5 fs-5">
+      Meet the talented professionals who drive our innovation and success.
     </p>
 
     <swiper [config]="team" class="mb-5">
@@ -703,34 +756,8 @@
     </swiper>
   </div>
 </section> -->
-<!-- world map  -->
-<section id="world" class="py-5" data-aos="fade-up" data-aos-duration="2000">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-12 text-center mb-4">
-        <h2 class="fw-bold col-lg-5 mx-auto mb-3">
-          We code & connect you with the world.
-        </h2>
-        <p class="col-lg-8 mx-auto">
-          Beyond Borders, Beyond Limits: Connecting the World Through Software &
-          Digital Marketing!The world is our canvas, and languages are our
-          colors. We're not just a software and digitalmarketing company; we're
-          global architects, building bridges across cultures and continents.
-        </p>
-      </div>
-      <div class="col-12 text-center">
-        <img class="img-fluid" src="./assets/images/worldmap.png" alt="" />
-      </div>
-    </div>
-  </div>
-</section>
 <!-- ready -->
-<section
-  id="ready"
-  class="py-5"
-  data-aos="zoom-out-up"
-  data-aos-duration="1800"
->
+<section id="ready" class="py-5">
   <div class="container">
     <div class="row justify-content-center align-items-center">
       <div class="col-lg-9 mb-lg-0 mb-3 text-lg-start text-center">
@@ -751,3 +778,4 @@
     </div>
   </div>
 </section>
+<app-footer></app-footer>

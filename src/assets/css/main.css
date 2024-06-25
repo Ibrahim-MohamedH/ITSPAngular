@@ -33,50 +33,14 @@
 *::first-letter {
   text-transform: capitalize;
 }
-body {
+body,
+section {
   overflow-x: hidden;
 }
 /* html {
   background: var(--linear);
 } */
-/*--------------------------------------------------------------
-# navbar
---------------------------------------------------------------*/
-.top-bar {
-  background-color: var(--black);
-  color: var(--font-main);
-}
-nav {
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-}
 
-nav .navbar-nav .nav-link,
-nav .navbar-nav .nav-link.show {
-  color: var(--black);
-  box-shadow: none;
-  font-size: 20px;
-}
-nav .navbar-nav .nav-link.active {
-  color: var(--fulvous);
-}
-nav .navbar-nav .nav-item .dropdown-menu.show {
-  background-color: var(--black);
-}
-nav .navbar-nav .nav-item .dropdown-menu .dropdown-item {
-  color: var(--font-main);
-}
-nav .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
-  background-color: rgba(255, 255, 255, 0.281);
-}
-nav .nav-item button.btn {
-  background-color: var(--font-main);
-}
-nav .nav-item a.access span {
-  background: var(--linear);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
@@ -86,7 +50,7 @@ nav .nav-item a.access span {
 #hero p span.fw-bold {
   color: var(--fulvous);
 }
-#hero a {
+#hero a.btn {
   background-color: var(--fulvous);
   color: var(--font-main);
   border-radius: 8px;
@@ -133,9 +97,12 @@ nav .nav-item a.access span {
 /*--------------------------------------------------------------
 # AboutUs page
 --------------------------------------------------------------*/
+
 #AboutUs-hero {
   background-image: url(../images/AboutUs.png);
   color: var(--font-main);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #AboutUs-hero h1 {
   font-family: var(--font-headers);
@@ -201,6 +168,10 @@ nav .nav-item a.access span {
 #aboutCard-4 h2 {
   font-family: var(--font-headers);
 }
+#aboutCard-4 .position-absolute p {
+  font-size: 20px;
+}
+
 #aboutCard-5 h3 {
   font-family: var(--font-headers);
 }
@@ -267,13 +238,15 @@ nav .nav-item a.access span {
 /*--------------------------------------------------------------
 # Reels
 --------------------------------------------------------------*/
-#reels {
+/* #reels {
   background: var(--grey);
   color: white;
-}
-#reels h2 {
+} */
+#reels h2,
+#reels h2 span {
   font-family: var(--font-headers);
 }
+
 #reels iframe {
   height: 400px;
   border-radius: 4px;
@@ -334,7 +307,6 @@ nav .nav-item a.access span {
 # portfolio
 --------------------------------------------------------------*/
 #portfolio h2 {
-  font-size: 40px;
   font-family: var(--font-headers);
 }
 
@@ -358,8 +330,9 @@ nav .nav-item a.access span {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-#team h3 {
-  font-size: 48px;
+#team h2,
+#team h2 span {
+  font-family: var(--font-headers);
 }
 #team .container > p {
   font-size: 20px;
@@ -411,6 +384,8 @@ nav .nav-item a.access span {
 #world {
   background-color: white;
   color: var(--black);
+  position: relative;
+  overflow-y: hidden;
 }
 #world h2 {
   font-family: var(--font-headers);
@@ -418,6 +393,19 @@ nav .nav-item a.access span {
 #world p {
   font-size: 20px;
 }
+#particle-js canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  /* background-color: rgba(230, 133, 34, 0.5); */
+}
+/* #particle-js {
+
+} */
+
 /*--------------------------------------------------------------
 # ready
 --------------------------------------------------------------*/
@@ -492,9 +480,7 @@ footer .copyright {
   text-decoration: none;
   font-size: 20px;
 }
-#allReels h2 {
-  font-size: 48px;
-}
+
 #allReels .card {
   border-radius: 16px;
 }
@@ -587,9 +573,7 @@ footer .copyright {
 /*--------------------------------------------------------------
 # register page
 --------------------------------------------------------------*/
-#login a,
-#login form label span,
-#register a,
+#register small a,
 #register form label span {
   color: var(--fulvous);
 }
@@ -610,7 +594,6 @@ footer .copyright {
   border-radius: 20px;
 }
 
-#login .col-lg-7,
 #register .col-lg-7 {
   background-image: url(../images/bg-rgister.png);
   background-position: right center;
@@ -619,15 +602,11 @@ footer .copyright {
 #register form h1 {
   text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
-#login form h1 span,
+
 #register form h1 span {
   font-family: var(--font-headers);
 }
 
-#login .auth a,
-#login form .form-control:not([type="file"]),
-#login form .form-select,
-#login form .input-group,
 #register .auth a,
 #register form .form-control:not([type="file"]),
 #register form .form-select,
@@ -635,7 +614,7 @@ footer .copyright {
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
-#login form .input-group label,
+
 #register form .input-group label {
   background-color: var(--black);
   color: var(--font-main);
@@ -643,7 +622,7 @@ footer .copyright {
 #register form .input-group input[type="file"]::file-selector-button {
   display: none;
 }
-#login form button,
+
 #register form button {
   background-color: var(--fulvous);
   color: var(--font-main);
@@ -1221,7 +1200,7 @@ footer .copyright {
 /*--------------------------------------------------------------
 # Media Query
 --------------------------------------------------------------*/
-@media (max-width: 1400px) {
+@media (max-width: 1440px) {
   #allReels .card .blackout {
     height: 260px;
   }
@@ -1229,9 +1208,14 @@ footer .copyright {
   #solutions #marketing p {
     margin-bottom: 5px;
   }
-  #jobResults #marketing,
+  #jobResults #marketing {
+    padding: 20px 24px !important;
+  }
   #solutions #marketing {
-    padding: 8px 24px !important;
+    padding: 12px 24px !important;
+  }
+  #register .col-lg-7 {
+    height: 92vh;
   }
 }
 @media (max-width: 1200px) {
@@ -1245,6 +1229,9 @@ footer .copyright {
   #jobResults #software,
   #solutions #software {
     padding: 28px 24px !important;
+  }
+  #register .col-lg-7 {
+    height: 80vh;
   }
 }
 @media (max-width: 992px) {
@@ -1338,5 +1325,12 @@ footer .copyright {
   }
   #allReels .card .blackout {
     height: 260px;
+  }
+  #aboutCard-4 .position-absolute h4 {
+    margin-bottom: 4px;
+  }
+  #aboutCard-4 .position-absolute p {
+    font-size: 16px;
+    margin-bottom: 0px;
   }
 }

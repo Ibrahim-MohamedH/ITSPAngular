@@ -1,0 +1,16 @@
+#aboutCard-4,
+#aboutCard-7 {
+  overflow-y: hidden;
+}
+#aboutCard-6 .col-lg-6 .mini-card,
+#aboutCard-7 .rows {
+  transition: background-color 0.3s, color 0.4s;
+}
+#aboutCard-6 .col-lg-6 .mini-card:hover {
+  background-color: var(--fulvous);
+  color: white;
+}
+#aboutCard-7 .rows:hover {
+  background-color: var(--fulvous);
+  color: white;
+}

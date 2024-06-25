@@ -1,0 +1,157 @@
+:root {
+  --orange: #e86123;
+  --dark-blue: #2a3484;
+  --light-blue: #cce4f6;
+  --font1: "Cairo", sans-serif;
+  --font2: "Lato", sans-serif;
+}
+/*--------------------------------------------------------------
+# Intro (section 1)
+--------------------------------------------------------------*/
+#intro {
+  font-family: "Cairo", sans-serif;
+  background-image: url("../../../assets/images/loc_camp/locCamp_main.png");
+  background-size: 100% 100%;
+  /* background-position: top right; */
+  background-repeat: no-repeat;
+}
+#intro .navbar .navbar-toggler {
+  border: none;
+  background-color: rgba(0, 73, 146, 0.84);
+  font-size: 32px;
+}
+#intro .navbar .navbar-toggler i {
+  color: white;
+}
+#intro .navbar .navbar-nav .nav-item {
+  margin: 0px 5px;
+}
+#intro .navbar .navbar-nav .nav-item .nav-link.dropdown-toggle::after {
+  font-family: "fontawesome";
+  content: "\f078";
+  border: none;
+  font-size: 16px;
+}
+#intro .navbar .navbar-nav .nav-item .dropdown-menu {
+  background-color: white;
+  /* color: ; */
+}
+#intro .navbar .navbar-nav .nav-item .nav-link {
+  color: white;
+  transition: color 0.3s;
+}
+#intro .navbar .navbar-nav .nav-item:not(:last-child) .nav-link:hover {
+  color: var(--orange);
+}
+#intro .navbar .navbar-nav .nav-item:not(:last-child) .nav-link {
+  font-size: 20px;
+  font-weight: bold;
+}
+#intro .navbar .navbar-nav .nav-item .nav-link.active {
+  text-decoration: underline;
+}
+#intro .navbar .navbar-nav .nav-item:last-child {
+  background-color: var(--orange);
+  transform: skew(-20deg);
+  margin: 0px;
+  padding: 0px;
+}
+#intro .navbar .navbar-nav .nav-item:last-child .nav-link {
+  transform: skew(20deg);
+}
+#intro h1 span {
+  color: var(--orange);
+}
+#intro a.btn {
+  background-color: var(--orange);
+  color: white;
+  border-radius: 12px;
+}
+/*--------------------------------------------------------------
+# locCampSolutions (section 2)
+--------------------------------------------------------------*/
+#locCampSolutions {
+  font-family: "Lato", sans-serif;
+}
+#locCampSolutions h2 {
+  color: var(--orange);
+}
+/*--------------------------------------------------------------
+# locCampMessage (section 3)
+--------------------------------------------------------------*/
+#locCampMessage {
+  font-family: "Lato", sans-serif;
+  background-image: url("../../../assets/images/loc_camp/contact.png");
+  background-size: 100% 100%;
+  /* background-position: top left; */
+  background-repeat: no-repeat;
+}
+#locCampMessage form label {
+  color: white;
+}
+#locCampMessage form button {
+  background-color: var(--orange);
+  color: white;
+}
+/*--------------------------------------------------------------
+# locCampAcheivement (section 4)
+--------------------------------------------------------------*/
+#locCampAcheivement {
+  font-family: "Lato", sans-serif;
+  background-color: #cce4f6;
+}
+#locCampAcheivement h2 {
+  color: #2a3484;
+}
+#locCampAcheivement span.display-4 {
+  color: var(--orange);
+}
+#locCampAcheivement span.texts {
+  color: #2a3484;
+}
+/*--------------------------------------------------------------
+# locCampFooter (section 5)
+--------------------------------------------------------------*/
+#locCampFooter {
+  background-image: url("../../../assets/images/loc_camp/footer.png");
+  background-size: 100% 100%;
+}
+#locCampFooter a {
+  color: var(--orange);
+}
+/*--------------------------------------------------------------
+# @media Query
+--------------------------------------------------------------*/
+@media (max-width: 1200px) {
+  #intro .navbar .navbar-nav .nav-item {
+    margin: 0px;
+  }
+}
+@media (max-width: 992px) {
+  #intro .navbar .navbar-nav .nav-item:last-child,
+  #intro .navbar .navbar-nav .nav-item:last-child .nav-link {
+    transform: skew(0deg);
+  }
+  #intro .navbar .navbar-nav .nav-item .nav-link {
+    padding: 8px;
+  }
+  #intro,
+  #locCampMessage {
+    background-size: cover;
+  }
+  #intro {
+    background-position: top right;
+  }
+}
+@media (max-width: 768px) {
+  #intro,
+  #locCampMessage {
+    background-position: top left;
+  }
+}
+@media (max-width: 576px) {
+  #locCampFooter {
+    background-image: url("../../../assets/images/loc_camp/footer-mobile.png");
+    background-size: 100% 100%;
+  }
+}
